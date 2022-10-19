@@ -43,6 +43,7 @@
             this.txt_Input.Name = "txt_Input";
             this.txt_Input.Size = new System.Drawing.Size(100, 23);
             this.txt_Input.TabIndex = 0;
+            this.txt_Input.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Input_KeyDown);
             // 
             // txt_Msg
             // 
@@ -62,6 +63,7 @@
             this.btn_Reset.TabIndex = 2;
             this.btn_Reset.Text = "Limpa";
             this.btn_Reset.UseVisualStyleBackColor = true;
+            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
             // 
             // lbl_Minus
             // 
