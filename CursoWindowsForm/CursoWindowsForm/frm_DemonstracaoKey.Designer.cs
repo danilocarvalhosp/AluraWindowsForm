@@ -108,6 +108,7 @@
             this.Controls.Add(this.txt_Msg);
             this.Controls.Add(this.txt_Input);
             this.Name = "frm_DemonstracaoKey";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Demonstração Evento Key";
             this.ResumeLayout(false);
             this.PerformLayout();
