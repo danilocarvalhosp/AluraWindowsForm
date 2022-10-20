@@ -37,3 +37,7 @@ C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindows
 C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_ValidaSenha.resources
 C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_Mascara.resources
 C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_ValidaCPF.resources
+E:\Projetos\Curso C#\Alura\WindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_Mascara.resources
+E:\Projetos\Curso C#\Alura\WindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_ValidaCPF.resources
+E:\Projetos\Curso C#\Alura\WindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_ValidaCPF2.resources
+E:\Projetos\Curso C#\Alura\WindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_ValidaSenha.resources
