@@ -42,3 +42,4 @@ E:\Projetos\Curso C#\Alura\WindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Deb
 E:\Projetos\Curso C#\Alura\WindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_ValidaCPF2.resources
 E:\Projetos\Curso C#\Alura\WindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_ValidaSenha.resources
 E:\Projetos\Curso C#\Alura\WindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_Principal.resources
+E:\Projetos\Curso C#\Alura\WindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.Properties.Resources.resources

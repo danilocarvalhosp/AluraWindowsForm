@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ValidaSenha));
             this.txt_Senha = new System.Windows.Forms.TextBox();
             this.lbl_resultado = new System.Windows.Forms.Label();
             this.btn_reset = new System.Windows.Forms.Button();
@@ -81,6 +82,7 @@
             this.Controls.Add(this.btn_reset);
             this.Controls.Add(this.lbl_resultado);
             this.Controls.Add(this.txt_Senha);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_ValidaSenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Validação de Senhas";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Mascara));
             this.msk_textBox = new System.Windows.Forms.MaskedTextBox();
             this.lbl_conteudo = new System.Windows.Forms.Label();
             this.lbl_mascaraAtiva = new System.Windows.Forms.Label();
@@ -152,6 +153,7 @@
             this.Controls.Add(this.lbl_mascaraAtiva);
             this.Controls.Add(this.lbl_conteudo);
             this.Controls.Add(this.msk_textBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Mascara";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exemplos de Máscaras";
