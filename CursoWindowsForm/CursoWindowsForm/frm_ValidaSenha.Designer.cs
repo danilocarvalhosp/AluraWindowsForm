@@ -31,12 +31,14 @@
             this.txt_Senha = new System.Windows.Forms.TextBox();
             this.lbl_resultado = new System.Windows.Forms.Label();
             this.btn_reset = new System.Windows.Forms.Button();
+            this.btn_verSenha = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_Senha
             // 
             this.txt_Senha.Location = new System.Drawing.Point(12, 45);
             this.txt_Senha.Name = "txt_Senha";
+            this.txt_Senha.PasswordChar = '*';
             this.txt_Senha.Size = new System.Drawing.Size(218, 23);
             this.txt_Senha.TabIndex = 0;
             this.txt_Senha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Senha_KeyDown);
@@ -60,11 +62,22 @@
             this.btn_reset.UseVisualStyleBackColor = true;
             this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
+            // btn_verSenha
+            // 
+            this.btn_verSenha.Location = new System.Drawing.Point(245, 71);
+            this.btn_verSenha.Name = "btn_verSenha";
+            this.btn_verSenha.Size = new System.Drawing.Size(111, 23);
+            this.btn_verSenha.TabIndex = 3;
+            this.btn_verSenha.Text = "Ver senha";
+            this.btn_verSenha.UseVisualStyleBackColor = true;
+            this.btn_verSenha.Click += new System.EventHandler(this.btn_verSenha_Click);
+            // 
             // frm_ValidaSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(368, 154);
+            this.Controls.Add(this.btn_verSenha);
             this.Controls.Add(this.btn_reset);
             this.Controls.Add(this.lbl_resultado);
             this.Controls.Add(this.txt_Senha);
@@ -81,5 +94,6 @@
         private TextBox txt_Senha;
         private Label lbl_resultado;
         private Button btn_reset;
+        private Button btn_verSenha;
     }
 }
