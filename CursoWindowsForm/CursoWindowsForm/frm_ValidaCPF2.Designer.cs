@@ -49,6 +49,7 @@
             this.btn_reset.TabIndex = 2;
             this.btn_reset.Text = "Limpa";
             this.btn_reset.UseVisualStyleBackColor = true;
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
             // btn_valida
             // 
@@ -58,6 +59,7 @@
             this.btn_valida.TabIndex = 3;
             this.btn_valida.Text = "Valida";
             this.btn_valida.UseVisualStyleBackColor = true;
+            this.btn_valida.Click += new System.EventHandler(this.btn_valida_Click);
             // 
             // frm_ValidaCPF2
             // 

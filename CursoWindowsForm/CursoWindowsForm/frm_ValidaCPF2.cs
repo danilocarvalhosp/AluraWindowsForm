@@ -16,5 +16,24 @@ namespace CursoWindowsForm
         {
             InitializeComponent();
         }
+
+        private void btn_reset_Click(object sender, EventArgs e)
+        {
+            msk_CPF.Text = "";
+        }
+
+        private void btn_valida_Click(object sender, EventArgs e)
+        {
+            bool validaCPF = false;
+            validaCPF = Cls_Uteis.Valida(msk_CPF.Text);
+            if (validaCPF)
+            {
+                MessageBox.Show("CPF VÁLIDO", "Mensagem de Validação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("CPF INVÁLIDO", "Mensagem de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
