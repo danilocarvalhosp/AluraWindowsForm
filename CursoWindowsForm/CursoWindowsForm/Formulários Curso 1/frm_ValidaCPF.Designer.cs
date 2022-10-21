@@ -45,6 +45,7 @@
             // 
             // lbl_resultado
             // 
+            this.lbl_resultado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_resultado.AutoSize = true;
             this.lbl_resultado.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_resultado.Location = new System.Drawing.Point(12, 90);
@@ -54,6 +55,7 @@
             // 
             // btn_reset
             // 
+            this.btn_reset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_reset.Location = new System.Drawing.Point(245, 42);
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Size = new System.Drawing.Size(111, 23);
@@ -64,6 +66,7 @@
             // 
             // btn_valida
             // 
+            this.btn_valida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_valida.Location = new System.Drawing.Point(245, 71);
             this.btn_valida.Name = "btn_valida";
             this.btn_valida.Size = new System.Drawing.Size(111, 23);
