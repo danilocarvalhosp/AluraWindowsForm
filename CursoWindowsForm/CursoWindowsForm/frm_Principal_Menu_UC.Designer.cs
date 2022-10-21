@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Principal_Menu_UC));
             this.mnu_principal = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +42,7 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbc_aplicacoes = new System.Windows.Forms.TabControl();
+            this.iml_imagens = new System.Windows.Forms.ImageList(this.components);
             this.mnu_principal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +76,7 @@
             this.validaCPF2ToolStripMenuItem,
             this.validaSenhaToolStripMenuItem});
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.novoToolStripMenuItem.Text = "Novo";
             // 
             // demonstraçãoKeyToolStripMenuItem
@@ -131,7 +134,7 @@
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -144,11 +147,24 @@
             // tbc_aplicacoes
             // 
             this.tbc_aplicacoes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbc_aplicacoes.ImageList = this.iml_imagens;
             this.tbc_aplicacoes.Location = new System.Drawing.Point(0, 24);
             this.tbc_aplicacoes.Name = "tbc_aplicacoes";
             this.tbc_aplicacoes.SelectedIndex = 0;
             this.tbc_aplicacoes.Size = new System.Drawing.Size(800, 426);
             this.tbc_aplicacoes.TabIndex = 1;
+            // 
+            // iml_imagens
+            // 
+            this.iml_imagens.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.iml_imagens.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("iml_imagens.ImageStream")));
+            this.iml_imagens.TransparentColor = System.Drawing.Color.Transparent;
+            this.iml_imagens.Images.SetKeyName(0, "Frm_DemonstracaoKey.png");
+            this.iml_imagens.Images.SetKeyName(1, "Frm_HelloWorld.png");
+            this.iml_imagens.Images.SetKeyName(2, "Frm_Mascara.png");
+            this.iml_imagens.Images.SetKeyName(3, "Frm_ValidaCPF.png");
+            this.iml_imagens.Images.SetKeyName(4, "Frm_ValidaCPF2.png");
+            this.iml_imagens.Images.SetKeyName(5, "Frm_ValidaSenha.png");
             // 
             // frm_Principal_Menu_UC
             // 
@@ -182,5 +198,6 @@
         private ToolStripMenuItem sairToolStripMenuItem;
         private ToolStripMenuItem windowsToolStripMenuItem;
         private TabControl tbc_aplicacoes;
+        private ImageList iml_imagens;
     }
 }

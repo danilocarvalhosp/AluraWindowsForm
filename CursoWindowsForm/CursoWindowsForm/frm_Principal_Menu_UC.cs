@@ -29,6 +29,7 @@ namespace CursoWindowsForm
             TabPage TB = new();
             TB.Name = "Hello World";
             TB.Text = TB.Name;
+            TB.ImageIndex = 1;
             TB.Controls.Add(U);
             tbc_aplicacoes.TabPages.Add(TB);
         }
