@@ -25,5 +25,8 @@
     <Compile Update="frm_Principal_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frm_Principal_Menu_MDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

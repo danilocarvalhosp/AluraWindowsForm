@@ -50,3 +50,4 @@ C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindows
 C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\bin\Debug\net6.0-windows\CursoWindowsFormsBiblioteca.pdb
 C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.csproj.CopyComplete
 C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_Principal_Menu.resources
+C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_Principal_Menu_MDI.resources
