@@ -39,11 +39,11 @@
             this.validaCPFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validaCPF2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validaSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.apagarAbaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbc_aplicacoes = new System.Windows.Forms.TabControl();
             this.iml_imagens = new System.Windows.Forms.ImageList(this.components);
-            this.apagarAbaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_principal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +83,7 @@
             // 
             // demonstraçãoKeyToolStripMenuItem
             // 
+            this.demonstraçãoKeyToolStripMenuItem.Image = global::CursoWindowsForm.Properties.Resources.Frm_DemonstracaoKey;
             this.demonstraçãoKeyToolStripMenuItem.Name = "demonstraçãoKeyToolStripMenuItem";
             this.demonstraçãoKeyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.K)));
             this.demonstraçãoKeyToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
@@ -91,6 +92,7 @@
             // 
             // helloWorldToolStripMenuItem
             // 
+            this.helloWorldToolStripMenuItem.Image = global::CursoWindowsForm.Properties.Resources.Frm_HelloWorld;
             this.helloWorldToolStripMenuItem.Name = "helloWorldToolStripMenuItem";
             this.helloWorldToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.W)));
             this.helloWorldToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
@@ -133,6 +135,13 @@
             this.validaSenhaToolStripMenuItem.Text = "Valida &Senha";
             this.validaSenhaToolStripMenuItem.Click += new System.EventHandler(this.validaSenhaToolStripMenuItem_Click);
             // 
+            // apagarAbaToolStripMenuItem
+            // 
+            this.apagarAbaToolStripMenuItem.Name = "apagarAbaToolStripMenuItem";
+            this.apagarAbaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.apagarAbaToolStripMenuItem.Text = "Apagar Aba";
+            this.apagarAbaToolStripMenuItem.Click += new System.EventHandler(this.apagarAbaToolStripMenuItem_Click);
+            // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
@@ -167,13 +176,6 @@
             this.iml_imagens.Images.SetKeyName(3, "Frm_ValidaCPF.png");
             this.iml_imagens.Images.SetKeyName(4, "Frm_ValidaCPF2.png");
             this.iml_imagens.Images.SetKeyName(5, "Frm_ValidaSenha.png");
-            // 
-            // apagarAbaToolStripMenuItem
-            // 
-            this.apagarAbaToolStripMenuItem.Name = "apagarAbaToolStripMenuItem";
-            this.apagarAbaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.apagarAbaToolStripMenuItem.Text = "Apagar Aba";
-            this.apagarAbaToolStripMenuItem.Click += new System.EventHandler(this.apagarAbaToolStripMenuItem_Click);
             // 
             // frm_Principal_Menu_UC
             // 

@@ -13,6 +13,11 @@ namespace CursoWindowsForm
     public partial class frm_Principal_Menu_UC : Form
     {
         int ControleHelloWorld = 0;
+        int ControleDemonstracaoKey = 0;
+        int ControleMarcara = 0;
+        int ControleValidaCPF = 0;
+        int ControleValidaCPF2 = 0;
+        int ControleValidaSenha = 0;
 
         public frm_Principal_Menu_UC()
         {
@@ -21,14 +26,22 @@ namespace CursoWindowsForm
 
         private void demonstraçãoKeyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_DemonstracaoKey f = new();
-            f.ShowDialog();
+            ControleDemonstracaoKey += 1;
+            frm_DemonstraçãoKey_UC U = new();
+            U.Dock = DockStyle.Fill;
+            TabPage TB = new();
+            TB.Name = "Demonstração Key " + ControleDemonstracaoKey;
+            TB.Text = TB.Name;
+            TB.ImageIndex = 0;
+            TB.Controls.Add(U);
+            tbc_aplicacoes.TabPages.Add(TB);
         }
 
         private void helloWorldToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ControleHelloWorld += 1;
             frm_HelloWorld_UC U = new();
+            U.Dock = DockStyle.Fill;
             TabPage TB = new();
             TB.Name = "Hello World " + ControleHelloWorld;
             TB.Text = TB.Name;
@@ -39,26 +52,54 @@ namespace CursoWindowsForm
 
         private void máscaraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_Mascara f = new();
-            f.ShowDialog();
+            ControleMarcara += 1;
+            frm_Mascara_UC U = new();
+            U.Dock = DockStyle.Fill;
+            TabPage TB = new();
+            TB.Name = "Máscara " + ControleMarcara;
+            TB.Text = TB.Name;
+            TB.ImageIndex = 1;
+            TB.Controls.Add(U);
+            tbc_aplicacoes.TabPages.Add(TB);
         }
 
         private void validaCPFToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_ValidaCPF f = new();
-            f.ShowDialog();
+            ControleValidaCPF += 1;
+            frm_ValidaCPF_UC U = new();
+            U.Dock = DockStyle.Fill;
+            TabPage TB = new();
+            TB.Name = "Valida CPF " + ControleValidaCPF;
+            TB.Text = TB.Name;
+            TB.ImageIndex = 0;
+            TB.Controls.Add(U);
+            tbc_aplicacoes.TabPages.Add(TB);
         }
 
         private void validaCPF2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_ValidaCPF2 f = new();
-            f.ShowDialog();
+            ControleValidaCPF2 += 1;
+            frm_ValidaCPF2_UC U = new();
+            U.Dock = DockStyle.Fill;
+            TabPage TB = new();
+            TB.Name = "Valida CPF2 " + ControleValidaCPF2;
+            TB.Text = TB.Name;
+            TB.ImageIndex = 0;
+            TB.Controls.Add(U);
+            tbc_aplicacoes.TabPages.Add(TB);
         }
 
         private void validaSenhaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_ValidaSenha f = new();
-            f.ShowDialog();
+            ControleValidaSenha += 1;
+            frm_ValidaSenha_UC U = new();
+            U.Dock = DockStyle.Fill;
+            TabPage TB = new();
+            TB.Name = "Valida Senha " + ControleValidaSenha;
+            TB.Text = TB.Name;
+            TB.ImageIndex = 0;
+            TB.Controls.Add(U);
+            tbc_aplicacoes.TabPages.Add(TB);
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
