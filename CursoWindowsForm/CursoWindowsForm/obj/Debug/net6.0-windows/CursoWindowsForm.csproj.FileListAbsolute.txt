@@ -58,3 +58,4 @@ C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindows
 C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_ValidaCPF2_UC.resources
 C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_ValidaCPF_UC.resources
 C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_ValidaSenha_UC.resources
+C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_Questao.resources

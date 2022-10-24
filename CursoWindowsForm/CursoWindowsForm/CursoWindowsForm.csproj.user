@@ -40,6 +40,9 @@
     <Compile Update="frm_Principal_Menu_UC.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frm_Questao.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frm_ValidaCPF2_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
