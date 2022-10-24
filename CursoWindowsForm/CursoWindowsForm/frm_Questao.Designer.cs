@@ -32,8 +32,8 @@
             this.lbl_questao = new System.Windows.Forms.Label();
             this.btn_Ok = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pic_imagem = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_imagem)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_questao
@@ -66,22 +66,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox1
+            // pic_imagem
             // 
-            this.pictureBox1.Image = global::CursoWindowsForm.Properties.Resources.icons8_question_mark_961;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 109);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pic_imagem.Image = global::CursoWindowsForm.Properties.Resources.icons8_question_mark_961;
+            this.pic_imagem.Location = new System.Drawing.Point(14, 32);
+            this.pic_imagem.Name = "pic_imagem";
+            this.pic_imagem.Size = new System.Drawing.Size(127, 109);
+            this.pic_imagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pic_imagem.TabIndex = 3;
+            this.pic_imagem.TabStop = false;
             // 
             // frm_Questao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(289, 151);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pic_imagem);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Ok);
             this.Controls.Add(this.lbl_questao);
@@ -92,7 +92,7 @@
             this.Name = "frm_Questao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Questão";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_imagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,6 +103,6 @@
         private Label lbl_questao;
         private Button btn_Ok;
         private Button button1;
-        private PictureBox pictureBox1;
+        private PictureBox pic_imagem;
     }
 }
