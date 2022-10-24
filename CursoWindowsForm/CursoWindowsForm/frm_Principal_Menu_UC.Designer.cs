@@ -43,6 +43,7 @@
             this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbc_aplicacoes = new System.Windows.Forms.TabControl();
             this.iml_imagens = new System.Windows.Forms.ImageList(this.components);
+            this.apagarAbaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_principal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +62,7 @@
             // 
             this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novoToolStripMenuItem,
+            this.apagarAbaToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
@@ -166,6 +168,13 @@
             this.iml_imagens.Images.SetKeyName(4, "Frm_ValidaCPF2.png");
             this.iml_imagens.Images.SetKeyName(5, "Frm_ValidaSenha.png");
             // 
+            // apagarAbaToolStripMenuItem
+            // 
+            this.apagarAbaToolStripMenuItem.Name = "apagarAbaToolStripMenuItem";
+            this.apagarAbaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.apagarAbaToolStripMenuItem.Text = "Apagar Aba";
+            this.apagarAbaToolStripMenuItem.Click += new System.EventHandler(this.apagarAbaToolStripMenuItem_Click);
+            // 
             // frm_Principal_Menu_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -199,5 +208,6 @@
         private ToolStripMenuItem windowsToolStripMenuItem;
         private TabControl tbc_aplicacoes;
         private ImageList iml_imagens;
+        private ToolStripMenuItem apagarAbaToolStripMenuItem;
     }
 }
