@@ -27,6 +27,10 @@ namespace CursoWindowsForm
         {
             frm_HelloWorld f = new();
             f.ShowDialog();
+
+            // string resultado = f.DialogResult.ToString();
+            // MessageBox.Show(resultado);
+            // f.Show();
         }
 
         private void máscaraToolStripMenuItem_Click(object sender, EventArgs e)

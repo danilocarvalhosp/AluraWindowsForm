@@ -9,6 +9,7 @@ namespace CursoWindowsForm
 
         private void btn_Sair_Click(object sender, EventArgs e)
         {
+            // DialogResult = DialogResult.OK;
             this.Close();
         }
 
