@@ -41,6 +41,8 @@
             this.validaSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.apagarAbaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.açõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.abrirImagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbc_aplicacoes = new System.Windows.Forms.TabControl();
             this.iml_imagens = new System.Windows.Forms.ImageList(this.components);
@@ -51,6 +53,7 @@
             // 
             this.mnu_principal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivoToolStripMenuItem,
+            this.açõesToolStripMenuItem,
             this.windowsToolStripMenuItem});
             this.mnu_principal.Location = new System.Drawing.Point(0, 0);
             this.mnu_principal.Name = "mnu_principal";
@@ -78,7 +81,7 @@
             this.validaCPF2ToolStripMenuItem,
             this.validaSenhaToolStripMenuItem});
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.novoToolStripMenuItem.Text = "Novo";
             // 
             // demonstraçãoKeyToolStripMenuItem
@@ -138,16 +141,31 @@
             // apagarAbaToolStripMenuItem
             // 
             this.apagarAbaToolStripMenuItem.Name = "apagarAbaToolStripMenuItem";
-            this.apagarAbaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.apagarAbaToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.apagarAbaToolStripMenuItem.Text = "Apagar Aba";
             this.apagarAbaToolStripMenuItem.Click += new System.EventHandler(this.apagarAbaToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
+            // açõesToolStripMenuItem
+            // 
+            this.açõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.abrirImagemToolStripMenuItem});
+            this.açõesToolStripMenuItem.Name = "açõesToolStripMenuItem";
+            this.açõesToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.açõesToolStripMenuItem.Text = "Ações";
+            // 
+            // abrirImagemToolStripMenuItem
+            // 
+            this.abrirImagemToolStripMenuItem.Name = "abrirImagemToolStripMenuItem";
+            this.abrirImagemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.abrirImagemToolStripMenuItem.Text = "Abrir Imagem";
+            this.abrirImagemToolStripMenuItem.Click += new System.EventHandler(this.abrirImagemToolStripMenuItem_Click);
             // 
             // windowsToolStripMenuItem
             // 
@@ -176,6 +194,7 @@
             this.iml_imagens.Images.SetKeyName(3, "Frm_ValidaCPF.png");
             this.iml_imagens.Images.SetKeyName(4, "Frm_ValidaCPF2.png");
             this.iml_imagens.Images.SetKeyName(5, "Frm_ValidaSenha.png");
+            this.iml_imagens.Images.SetKeyName(6, "icons8-live-folder-80.png");
             // 
             // frm_Principal_Menu_UC
             // 
@@ -211,5 +230,7 @@
         private TabControl tbc_aplicacoes;
         private ImageList iml_imagens;
         private ToolStripMenuItem apagarAbaToolStripMenuItem;
+        private ToolStripMenuItem açõesToolStripMenuItem;
+        private ToolStripMenuItem abrirImagemToolStripMenuItem;
     }
 }

@@ -10,6 +10,9 @@
     <Compile Update="Formulários Curso 1\frm_Mascara.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frm_ArquivoImagem_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="frm_DemonstraçãoKey_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>

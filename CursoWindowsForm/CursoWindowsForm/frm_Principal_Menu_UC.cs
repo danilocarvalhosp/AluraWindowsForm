@@ -18,6 +18,7 @@ namespace CursoWindowsForm
         int ControleValidaCPF = 0;
         int ControleValidaCPF2 = 0;
         int ControleValidaSenha = 0;
+        int ControleArquivoImagem = 0;
 
         public frm_Principal_Menu_UC()
         {
@@ -58,7 +59,7 @@ namespace CursoWindowsForm
             TabPage TB = new();
             TB.Name = "Máscara " + ControleMarcara;
             TB.Text = TB.Name;
-            TB.ImageIndex = 1;
+            TB.ImageIndex = 2;
             TB.Controls.Add(U);
             tbc_aplicacoes.TabPages.Add(TB);
         }
@@ -71,7 +72,7 @@ namespace CursoWindowsForm
             TabPage TB = new();
             TB.Name = "Valida CPF " + ControleValidaCPF;
             TB.Text = TB.Name;
-            TB.ImageIndex = 0;
+            TB.ImageIndex = 3;
             TB.Controls.Add(U);
             tbc_aplicacoes.TabPages.Add(TB);
         }
@@ -84,7 +85,7 @@ namespace CursoWindowsForm
             TabPage TB = new();
             TB.Name = "Valida CPF2 " + ControleValidaCPF2;
             TB.Text = TB.Name;
-            TB.ImageIndex = 0;
+            TB.ImageIndex = 4;
             TB.Controls.Add(U);
             tbc_aplicacoes.TabPages.Add(TB);
         }
@@ -97,7 +98,7 @@ namespace CursoWindowsForm
             TabPage TB = new();
             TB.Name = "Valida Senha " + ControleValidaSenha;
             TB.Text = TB.Name;
-            TB.ImageIndex = 0;
+            TB.ImageIndex = 5;
             TB.Controls.Add(U);
             tbc_aplicacoes.TabPages.Add(TB);
         }
@@ -113,6 +114,30 @@ namespace CursoWindowsForm
             {
                 tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.SelectedTab);
             }            
+        }
+
+        private void abrirImagemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog Db = new();
+            Db.InitialDirectory = "C:\\Users\\cpd4\\Videos\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsForm\\Imagens";
+            Db.Filter = "PNG | *.PNG";
+            Db.Title = "Escolha a Imagem";
+
+            if (Db.ShowDialog() == DialogResult.OK)
+            {
+                string nomeArquivoImagem = Db.FileName;
+                
+
+                ControleArquivoImagem += 1;
+                frm_ArquivoImagem_UC U = new(nomeArquivoImagem);
+                U.Dock = DockStyle.Fill;
+                TabPage TB = new();
+                TB.Name = "Arquivo Imagem " + ControleArquivoImagem;
+                TB.Text = TB.Name;
+                TB.ImageIndex = 6;
+                TB.Controls.Add(U);
+                tbc_aplicacoes.TabPages.Add(TB);
+            }
         }
     }
 }
