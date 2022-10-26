@@ -151,11 +151,23 @@ namespace CursoWindowsForm
 
             if (F.DialogResult == DialogResult.OK)
             {
-                novoToolStripMenuItem.Enabled = true;
-                apagarAbaToolStripMenuItem.Enabled = true;
-                abrirImagemToolStripMenuItem.Enabled = true;
-                conectarToolStripMenuItem.Enabled = false;
-                desconectarToolStripMenuItem.Enabled = true;
+                string senha = F.senha;
+                string login = F.login;
+
+                if (CursoWindowsFormsBiblioteca.Cls_Uteis.validaSenhaLogin(senha) == true)
+                {
+                    novoToolStripMenuItem.Enabled = true;
+                    apagarAbaToolStripMenuItem.Enabled = true;
+                    abrirImagemToolStripMenuItem.Enabled = true;
+                    conectarToolStripMenuItem.Enabled = false;
+                    desconectarToolStripMenuItem.Enabled = true;
+
+                    MessageBox.Show("Bem vindo " + login +"!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Senha inválida!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
