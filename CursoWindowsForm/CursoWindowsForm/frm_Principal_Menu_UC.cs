@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CursoWindowsFormsBiblioteca;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -173,11 +174,25 @@ namespace CursoWindowsForm
 
         private void desconectarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            novoToolStripMenuItem.Enabled = false;
-            apagarAbaToolStripMenuItem.Enabled = false;
-            abrirImagemToolStripMenuItem.Enabled = false;
-            conectarToolStripMenuItem.Enabled = true;
-            desconectarToolStripMenuItem.Enabled = false;
+            frm_Questao Db = new("icons8-question-mark-961", "Você deseja se desconectar?");
+            Db.ShowDialog();
+            //if (MessageBox.Show("Você deseja realmente validar o CPF?", "Mensagem de Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+            if (Db.DialogResult == DialogResult.Yes)
+            {
+                // tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.SelectedTab);
+
+                for (int i = tbc_aplicacoes.TabPages.Count - 1; i >= 0; i+=-1)
+                {
+                    tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.TabPages [i]);
+                }
+
+                novoToolStripMenuItem.Enabled = false;
+                apagarAbaToolStripMenuItem.Enabled = false;
+                abrirImagemToolStripMenuItem.Enabled = false;
+                conectarToolStripMenuItem.Enabled = true;
+                desconectarToolStripMenuItem.Enabled = false;
+            }
         }
     }
 }
