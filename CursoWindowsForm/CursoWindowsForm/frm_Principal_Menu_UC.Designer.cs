@@ -221,6 +221,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tbc_aplicacoes);
             this.Controls.Add(this.mnu_principal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnu_principal;
             this.Name = "frm_Principal_Menu_UC";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

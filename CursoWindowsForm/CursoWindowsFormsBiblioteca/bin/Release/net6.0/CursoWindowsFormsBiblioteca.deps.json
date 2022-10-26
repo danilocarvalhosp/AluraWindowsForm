@@ -6,14 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "CursoWindowsForm/1.0.0": {
-        "dependencies": {
-          "CursoWindowsFormsBiblioteca": "1.0.0"
-        },
-        "runtime": {
-          "CursoWindowsForm.dll": {}
-        }
-      },
       "CursoWindowsFormsBiblioteca/1.0.0": {
         "runtime": {
           "CursoWindowsFormsBiblioteca.dll": {}
@@ -22,11 +14,6 @@
     }
   },
   "libraries": {
-    "CursoWindowsForm/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "CursoWindowsFormsBiblioteca/1.0.0": {
       "type": "project",
       "serviceable": false,

@@ -1,0 +1,12 @@
+C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsFormsBiblioteca\bin\Release\net6.0\CursoWindowsFormsBiblioteca.deps.json
+C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsFormsBiblioteca\bin\Release\net6.0\CursoWindowsFormsBiblioteca.dll
+C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsFormsBiblioteca\bin\Release\net6.0\CursoWindowsFormsBiblioteca.pdb
+C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsFormsBiblioteca\obj\Release\net6.0\CursoWindowsFormsBiblioteca.csproj.AssemblyReference.cache
+C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsFormsBiblioteca\obj\Release\net6.0\CursoWindowsFormsBiblioteca.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsFormsBiblioteca\obj\Release\net6.0\CursoWindowsFormsBiblioteca.AssemblyInfoInputs.cache
+C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsFormsBiblioteca\obj\Release\net6.0\CursoWindowsFormsBiblioteca.AssemblyInfo.cs
+C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsFormsBiblioteca\obj\Release\net6.0\CursoWindowsFormsBiblioteca.csproj.CoreCompileInputs.cache
+C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsFormsBiblioteca\obj\Release\net6.0\CursoWindowsFormsBiblioteca.dll
+C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsFormsBiblioteca\obj\Release\net6.0\refint\CursoWindowsFormsBiblioteca.dll
+C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsFormsBiblioteca\obj\Release\net6.0\CursoWindowsFormsBiblioteca.pdb
+C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsFormsBiblioteca\obj\Release\net6.0\ref\CursoWindowsFormsBiblioteca.dll
