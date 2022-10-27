@@ -27,15 +27,18 @@ namespace CursoWindowsForm
 
             if (e.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                var PosicaoX = e.X;
-                var PosicaoY = e.Y;
-                // MessageBox.Show($"Cliquei com o botão da direita do mouse. A posição relativa foi ({PosicaoX.ToString()},{PosicaoY.ToString()})");
-
                 var ContextMenu = new ContextMenuStrip();
-                var vToolTip001 = new ToolStripMenuItem();
-                vToolTip001.Text = "Item do menu 1";
-                ContextMenu.Items.Add(vToolTip001.Text);
-                ContextMenu.Show(this, new Point(PosicaoX, PosicaoY));
+
+                ContextMenu.Items.Add(DesenhaItemMenu("Item do menu 1"));
+                ContextMenu.Items.Add(DesenhaItemMenu("Item do menu 2"));
+                ContextMenu.Show(this, new Point(e.X, e.Y));
+            }
+
+            ToolStripMenuItem DesenhaItemMenu(string text)
+            {
+                var vToolTip = new ToolStripMenuItem();
+                vToolTip.Text = "text";
+                return vToolTip;
             }
         }
     }
