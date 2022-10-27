@@ -28,6 +28,9 @@
     <Compile Update="frm_MouseCaptura.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frm_MouseCursor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frm_MouseEventos.cs">
       <SubType>Form</SubType>
     </Compile>
