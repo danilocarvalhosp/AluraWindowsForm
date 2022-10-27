@@ -24,10 +24,13 @@ namespace CursoWindowsForm
             //{
             //    MessageBox.Show(str1);
             //}
-            
+
             if (e.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                MessageBox.Show("Cliquei com o botão da direita do mouse");
+                var PosicaoX = e.X;
+                var PosicaoY = e.Y;
+
+                MessageBox.Show($"Cliquei com o botão da direita do mouse. A posição relativa foi ({PosicaoX.ToString()},{PosicaoY.ToString()})");
             }
         }
     }
