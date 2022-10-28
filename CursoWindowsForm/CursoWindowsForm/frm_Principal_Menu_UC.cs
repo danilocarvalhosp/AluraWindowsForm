@@ -194,5 +194,58 @@ namespace CursoWindowsForm
                 desconectarToolStripMenuItem.Enabled = false;
             }
         }
+
+        private void tbc_aplicacoes_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                var ContextMenu = new ContextMenuStrip();
+                var vToolTip001 = DesenhaItemMenu("Apagar a aba", "DeleteTab");
+                var vToolTip002 = DesenhaItemMenu("Apagar todas a esquerda", "DeleteLeft");
+                var vToolTip003 = DesenhaItemMenu("Apagar todas a direita", "DeleteRight");
+                var vToolTip004 = DesenhaItemMenu("Apagar todas exceto esta", "DeleteAll");
+
+                ContextMenu.Items.Add(vToolTip001);
+                ContextMenu.Items.Add(vToolTip002);
+                ContextMenu.Items.Add(vToolTip003);
+                ContextMenu.Items.Add(vToolTip004);
+                ContextMenu.Show(this, new Point(e.X, e.Y));
+
+                vToolTip001.Click += new EventHandler(VToolTip001_Click);
+                vToolTip002.Click += new EventHandler(VToolTip002_Click);
+                vToolTip002.Click += new EventHandler(VToolTip003_Click);
+                vToolTip002.Click += new EventHandler(VToolTip004_Click);
+            }
+        }
+
+        void VToolTip001_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        void VToolTip002_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        void VToolTip003_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        void VToolTip004_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        ToolStripMenuItem DesenhaItemMenu(string text, string nomeImagem)
+        {
+            var vToolTip = new ToolStripMenuItem();
+            vToolTip.Text = text;
+
+            Image? MyImage = (Image?) Properties.Resources.ResourceManager.GetObject(nomeImagem);
+            vToolTip.Image = MyImage;
+            return vToolTip;
+        }
     }
 }
