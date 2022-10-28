@@ -118,7 +118,7 @@ namespace CursoWindowsForm
             if (!(tbc_aplicacoes.SelectedTab == null))
             {
                 tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.SelectedTab);
-            }            
+            }
         }
 
         private void abrirImagemToolStripMenuItem_Click(object sender, EventArgs e)
@@ -131,7 +131,7 @@ namespace CursoWindowsForm
             if (Db.ShowDialog() == DialogResult.OK)
             {
                 string nomeArquivoImagem = Db.FileName;
-                
+
 
                 ControleArquivoImagem += 1;
                 frm_ArquivoImagem_UC U = new(nomeArquivoImagem);
@@ -163,7 +163,7 @@ namespace CursoWindowsForm
                     conectarToolStripMenuItem.Enabled = false;
                     desconectarToolStripMenuItem.Enabled = true;
 
-                    MessageBox.Show("Bem vindo " + login +"!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Bem vindo " + login + "!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -182,7 +182,7 @@ namespace CursoWindowsForm
             {
                 // tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.SelectedTab);
 
-                for (int i = tbc_aplicacoes.TabPages.Count - 1; i >= 0; i+=-1)
+                for (int i = tbc_aplicacoes.TabPages.Count - 1; i >= 0; i += -1)
                 {
                     tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.TabPages [i]);
                 }
@@ -228,17 +228,24 @@ namespace CursoWindowsForm
 
         void VToolTip002_Click(object sender, EventArgs e)
         {
-            
+            if (!(tbc_aplicacoes.SelectedTab == null))
+            {
+                int ItemSelecionado = tbc_aplicacoes.SelectedIndex;
+                for (int i = ItemSelecionado - 1; i >= 0; i += -1)
+                {
+                    tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.TabPages[i]);
+                }
+            }
         }
 
         void VToolTip003_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         void VToolTip004_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         ToolStripMenuItem DesenhaItemMenu(string text, string nomeImagem)
