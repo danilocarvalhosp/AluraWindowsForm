@@ -213,8 +213,8 @@ namespace CursoWindowsForm
 
                 vToolTip001.Click += new EventHandler(VToolTip001_Click);
                 vToolTip002.Click += new EventHandler(VToolTip002_Click);
-                vToolTip002.Click += new EventHandler(VToolTip003_Click);
-                vToolTip002.Click += new EventHandler(VToolTip004_Click);
+                vToolTip003.Click += new EventHandler(VToolTip003_Click);
+                vToolTip004.Click += new EventHandler(VToolTip004_Click);
             }
         }
 
@@ -240,7 +240,14 @@ namespace CursoWindowsForm
 
         void VToolTip003_Click(object sender, EventArgs e)
         {
-
+            if (!(tbc_aplicacoes.SelectedTab == null))
+            {
+                int ItemSelecionado = tbc_aplicacoes.SelectedIndex;
+                for (int i = tbc_aplicacoes.TabCount - 1; i > ItemSelecionado; i += -1)
+                {
+                    tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.TabPages [i]);
+                }
+            }
         }
 
         void VToolTip004_Click(object sender, EventArgs e)
