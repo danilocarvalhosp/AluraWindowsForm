@@ -230,11 +230,7 @@ namespace CursoWindowsForm
         {
             if (!(tbc_aplicacoes.SelectedTab == null))
             {
-                int ItemSelecionado = tbc_aplicacoes.SelectedIndex;
-                for (int i = ItemSelecionado - 1; i >= 0; i += -1)
-                {
-                    tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.TabPages[i]);
-                }
+                ApagaEsquerda(tbc_aplicacoes.SelectedIndex);
             }
         }
 
@@ -242,17 +238,17 @@ namespace CursoWindowsForm
         {
             if (!(tbc_aplicacoes.SelectedTab == null))
             {
-                int ItemSelecionado = tbc_aplicacoes.SelectedIndex;
-                for (int i = tbc_aplicacoes.TabCount - 1; i > ItemSelecionado; i += -1)
-                {
-                    tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.TabPages [i]);
-                }
+                ApagaDireita(tbc_aplicacoes.SelectedIndex);
             }
         }
 
         void VToolTip004_Click(object sender, EventArgs e)
         {
-
+            if (!(tbc_aplicacoes.SelectedTab == null))
+            {
+                ApagaEsquerda(tbc_aplicacoes.SelectedIndex);
+                ApagaDireita(tbc_aplicacoes.SelectedIndex);
+            }
         }
 
         ToolStripMenuItem DesenhaItemMenu(string text, string nomeImagem)
@@ -263,6 +259,22 @@ namespace CursoWindowsForm
             Image? MyImage = (Image?) Properties.Resources.ResourceManager.GetObject(nomeImagem);
             vToolTip.Image = MyImage;
             return vToolTip;
+        }
+
+        void ApagaDireita(int ItemSelecionado)
+        {
+            for (int i = tbc_aplicacoes.TabCount - 1; i > ItemSelecionado; i += -1)
+            {
+                tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.TabPages [i]);
+            }
+        }
+
+        void ApagaEsquerda(int ItemSelecionado)
+        {
+            for (int i = ItemSelecionado - 1; i >= 0; i += -1)
+            {
+                tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.TabPages [i]);
+            }
         }
     }
 }
