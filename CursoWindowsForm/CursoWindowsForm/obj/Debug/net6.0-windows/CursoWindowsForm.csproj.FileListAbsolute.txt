@@ -84,3 +84,4 @@ E:\Projetos\Curso C#\Alura\WindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Deb
 E:\Projetos\Curso C#\Alura\WindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_Principal_Menu_MDI.resources
 E:\Projetos\Curso C#\Alura\WindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.frm_Principal_Menu_UC.resources
 E:\Projetos\Curso C#\Alura\WindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.csproj.CopyComplete
+C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Debug\net6.0-windows\CursoWindowsForm.Frm_CadastroCliente_UC.resources

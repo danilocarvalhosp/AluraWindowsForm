@@ -25,6 +25,9 @@
     <Compile Update="Formulários Curso 2\frm_Mascara_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="frm_CadastroCliente_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="frm_MenuFlutuante.cs">
       <SubType>Form</SubType>
     </Compile>
