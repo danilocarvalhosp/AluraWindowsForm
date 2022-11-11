@@ -20,6 +20,7 @@ namespace CursoWindowsForm
         int ControleValidaCPF2 = 0;
         int ControleValidaSenha = 0;
         int ControleArquivoImagem = 0;
+        int ControleCadastroClientes = 0;
 
         public frm_Principal_Menu_UC()
         {
@@ -28,6 +29,7 @@ namespace CursoWindowsForm
             apagarAbaToolStripMenuItem.Enabled = false;
             abrirImagemToolStripMenuItem.Enabled = false;
             desconectarToolStripMenuItem.Enabled = false;
+            cadastrosToolStripMenuItem.Enabled = false;
         }
 
         private void demonstraçãoKeyToolStripMenuItem_Click(object sender, EventArgs e)
@@ -162,6 +164,7 @@ namespace CursoWindowsForm
                     abrirImagemToolStripMenuItem.Enabled = true;
                     conectarToolStripMenuItem.Enabled = false;
                     desconectarToolStripMenuItem.Enabled = true;
+                    cadastrosToolStripMenuItem.Enabled = true;
 
                     MessageBox.Show("Bem vindo " + login + "!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -192,6 +195,7 @@ namespace CursoWindowsForm
                 abrirImagemToolStripMenuItem.Enabled = false;
                 conectarToolStripMenuItem.Enabled = true;
                 desconectarToolStripMenuItem.Enabled = false;
+                cadastrosToolStripMenuItem.Enabled = false;
             }
         }
 
@@ -275,6 +279,19 @@ namespace CursoWindowsForm
             {
                 tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.TabPages [i]);
             }
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ControleCadastroClientes += 1;
+            Frm_CadastroCliente_UC U = new();
+            U.Dock = DockStyle.Fill;
+            TabPage TB = new();
+            TB.Name = "Cadastro de Clientes " + ControleCadastroClientes;
+            TB.Text = TB.Name;
+            TB.ImageIndex = 7;
+            TB.Controls.Add(U);
+            tbc_aplicacoes.TabPages.Add(TB);
         }
     }
 }
