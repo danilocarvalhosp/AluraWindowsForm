@@ -16,6 +16,10 @@ namespace CursoWindowsForm
         {
             InitializeComponent();
 
+            grp_codigo.Text = "Código";
+            grp_dadosPessoais.Text = "Dados Pessoais";
+            grp_endereco.Text = "Endereço";
+            grp_outros.Text = "Outros";
             lbl_bairro.Text = "Bairro";
             lbl_CEP.Text = "CEP";
             lbl_complemento.Text = "Complemento";
