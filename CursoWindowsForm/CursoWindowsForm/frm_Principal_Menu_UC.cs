@@ -119,7 +119,7 @@ namespace CursoWindowsForm
         {
             if (!(tbc_aplicacoes.SelectedTab == null))
             {
-                tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.SelectedTab);
+                ApagaAba(tbc_aplicacoes.SelectedTab);
             }
         }
 
@@ -183,11 +183,11 @@ namespace CursoWindowsForm
 
             if (Db.DialogResult == DialogResult.Yes)
             {
-                // tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.SelectedTab);
+                // ApagaAba(tbc_aplicacoes.SelectedTab);
 
                 for (int i = tbc_aplicacoes.TabPages.Count - 1; i >= 0; i += -1)
                 {
-                    tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.TabPages [i]);
+                    ApagaAba(tbc_aplicacoes.TabPages [i]);
                 }
 
                 novoToolStripMenuItem.Enabled = false;
@@ -226,7 +226,7 @@ namespace CursoWindowsForm
         {
             if (!(tbc_aplicacoes.SelectedTab == null))
             {
-                tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.SelectedTab);
+                ApagaAba(tbc_aplicacoes.SelectedTab);
             }
         }
 
@@ -269,7 +269,7 @@ namespace CursoWindowsForm
         {
             for (int i = tbc_aplicacoes.TabCount - 1; i > ItemSelecionado; i += -1)
             {
-                tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.TabPages [i]);
+                ApagaAba(tbc_aplicacoes.TabPages [i]);
             }
         }
 
@@ -277,21 +277,37 @@ namespace CursoWindowsForm
         {
             for (int i = ItemSelecionado - 1; i >= 0; i += -1)
             {
-                tbc_aplicacoes.TabPages.Remove(tbc_aplicacoes.TabPages [i]);
+                ApagaAba(tbc_aplicacoes.TabPages [i]);
             }
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ControleCadastroClientes += 1;
-            Frm_CadastroCliente_UC U = new();
-            U.Dock = DockStyle.Fill;
-            TabPage TB = new();
-            TB.Name = "Cadastro de Clientes " + ControleCadastroClientes;
-            TB.Text = TB.Name;
-            TB.ImageIndex = 7;
-            TB.Controls.Add(U);
-            tbc_aplicacoes.TabPages.Add(TB);
+            if (ControleCadastroClientes == 0)
+            {
+                ControleCadastroClientes += 1;
+                Frm_CadastroCliente_UC U = new();
+                U.Dock = DockStyle.Fill;
+                TabPage TB = new();
+                TB.Name = "Cadastro de Clientes";
+                TB.Text = TB.Name;
+                TB.ImageIndex = 7;
+                TB.Controls.Add(U);
+                tbc_aplicacoes.TabPages.Add(TB);
+            }
+            else
+            {
+                MessageBox.Show("Nâo é permitido abrir mais que uma tela de Cadastro de Clientes", "Banco ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        void ApagaAba(TabPage TB)
+        {
+            if (TB.Name == "Cadastro de Clientes")
+            {
+                ControleCadastroClientes = 0;
+            }
+            tbc_aplicacoes.TabPages.Remove(TB);
         }
     }
 }
