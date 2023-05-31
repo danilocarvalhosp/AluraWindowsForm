@@ -26,7 +26,6 @@ namespace CursoWindowsForm
             lbl_complemento.Text = "Complemento";
             lbl_CPF.Text = "CPF";
             lbl_estado.Text = "Estado";
-            lbl_genero.Text = "Genero";
             lbl_logradouro.Text = "Logradouro";
             lbl_nomeCliente.Text = "Nome";
             lbl_nomeMae.Text = "Nome da Mãe";
@@ -35,6 +34,10 @@ namespace CursoWindowsForm
             lbl_rendaFamiliar.Text = "Renda Familiar";
             lbl_telefone.Text = "Telefone";
             chk_TemPai.Text = "Pai desconhecido";
+            rdb_Masculino.Text = "Masculino";
+            rdb_Feminino.Text = "Feminino";
+            rdb_Indefinido.Text = "Indefinido";
+            grp_Genero.Text = "Gênero";
         }
 
         private void chk_TemPai_CheckedChanged(object sender, EventArgs e)

@@ -36,8 +36,6 @@
             lbl_nomePai = new Label();
             txt_nomeMae = new TextBox();
             lbl_nomeMae = new Label();
-            txt_genero = new TextBox();
-            lbl_genero = new Label();
             txt_CEP = new TextBox();
             lbl_CEP = new Label();
             txt_logradouro = new TextBox();
@@ -51,6 +49,10 @@
             txt_codigoCliente = new TextBox();
             grp_codigo = new GroupBox();
             grp_dadosPessoais = new GroupBox();
+            grp_Genero = new GroupBox();
+            rdb_Indefinido = new RadioButton();
+            rdb_Masculino = new RadioButton();
+            rdb_Feminino = new RadioButton();
             grp_TemPai = new GroupBox();
             chk_TemPai = new CheckBox();
             grp_endereco = new GroupBox();
@@ -65,6 +67,7 @@
             grp_outros = new GroupBox();
             grp_codigo.SuspendLayout();
             grp_dadosPessoais.SuspendLayout();
+            grp_Genero.SuspendLayout();
             grp_TemPai.SuspendLayout();
             grp_endereco.SuspendLayout();
             grp_outros.SuspendLayout();
@@ -73,7 +76,7 @@
             // lbl_CPF
             // 
             lbl_CPF.AutoSize = true;
-            lbl_CPF.Location = new Point(283, 148);
+            lbl_CPF.Location = new Point(484, 68);
             lbl_CPF.Name = "lbl_CPF";
             lbl_CPF.Size = new Size(38, 15);
             lbl_CPF.TabIndex = 0;
@@ -82,9 +85,9 @@
             // txt_CPF
             // 
             txt_CPF.Anchor =  AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txt_CPF.Location = new Point(281, 164);
+            txt_CPF.Location = new Point(482, 84);
             txt_CPF.Name = "txt_CPF";
-            txt_CPF.Size = new Size(493, 23);
+            txt_CPF.Size = new Size(292, 23);
             txt_CPF.TabIndex = 6;
             // 
             // txt_nomeCliente
@@ -107,15 +110,15 @@
             // txt_nomePai
             // 
             txt_nomePai.Anchor =  AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txt_nomePai.Location = new Point(6, 82);
+            txt_nomePai.Location = new Point(6, 122);
             txt_nomePai.Name = "txt_nomePai";
-            txt_nomePai.Size = new Size(508, 23);
+            txt_nomePai.Size = new Size(470, 23);
             txt_nomePai.TabIndex = 3;
             // 
             // lbl_nomePai
             // 
             lbl_nomePai.AutoSize = true;
-            lbl_nomePai.Location = new Point(6, 66);
+            lbl_nomePai.Location = new Point(6, 106);
             lbl_nomePai.Name = "lbl_nomePai";
             lbl_nomePai.Size = new Size(38, 15);
             lbl_nomePai.TabIndex = 4;
@@ -124,35 +127,19 @@
             // txt_nomeMae
             // 
             txt_nomeMae.Anchor =  AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txt_nomeMae.Location = new Point(6, 122);
+            txt_nomeMae.Location = new Point(6, 84);
             txt_nomeMae.Name = "txt_nomeMae";
-            txt_nomeMae.Size = new Size(508, 23);
+            txt_nomeMae.Size = new Size(470, 23);
             txt_nomeMae.TabIndex = 4;
             // 
             // lbl_nomeMae
             // 
             lbl_nomeMae.AutoSize = true;
-            lbl_nomeMae.Location = new Point(6, 106);
+            lbl_nomeMae.Location = new Point(6, 68);
             lbl_nomeMae.Name = "lbl_nomeMae";
             lbl_nomeMae.Size = new Size(38, 15);
             lbl_nomeMae.TabIndex = 6;
             lbl_nomeMae.Text = "label1";
-            // 
-            // txt_genero
-            // 
-            txt_genero.Location = new Point(6, 164);
-            txt_genero.Name = "txt_genero";
-            txt_genero.Size = new Size(271, 23);
-            txt_genero.TabIndex = 5;
-            // 
-            // lbl_genero
-            // 
-            lbl_genero.AutoSize = true;
-            lbl_genero.Location = new Point(6, 148);
-            lbl_genero.Name = "lbl_genero";
-            lbl_genero.Size = new Size(38, 15);
-            lbl_genero.TabIndex = 8;
-            lbl_genero.Text = "label1";
             // 
             // txt_CEP
             // 
@@ -255,6 +242,7 @@
             // 
             // grp_dadosPessoais
             // 
+            grp_dadosPessoais.Controls.Add(grp_Genero);
             grp_dadosPessoais.Controls.Add(grp_TemPai);
             grp_dadosPessoais.Controls.Add(txt_nomeCliente);
             grp_dadosPessoais.Controls.Add(lbl_nomeCliente);
@@ -262,8 +250,6 @@
             grp_dadosPessoais.Controls.Add(lbl_nomePai);
             grp_dadosPessoais.Controls.Add(txt_nomeMae);
             grp_dadosPessoais.Controls.Add(lbl_nomeMae);
-            grp_dadosPessoais.Controls.Add(txt_genero);
-            grp_dadosPessoais.Controls.Add(lbl_genero);
             grp_dadosPessoais.Controls.Add(txt_CPF);
             grp_dadosPessoais.Controls.Add(lbl_CPF);
             grp_dadosPessoais.Location = new Point(12, 65);
@@ -273,19 +259,63 @@
             grp_dadosPessoais.TabStop = false;
             grp_dadosPessoais.Text = "groupBox1";
             // 
+            // grp_Genero
+            // 
+            grp_Genero.Controls.Add(rdb_Indefinido);
+            grp_Genero.Controls.Add(rdb_Masculino);
+            grp_Genero.Controls.Add(rdb_Feminino);
+            grp_Genero.Location = new Point(482, 107);
+            grp_Genero.Name = "grp_Genero";
+            grp_Genero.Size = new Size(142, 79);
+            grp_Genero.TabIndex = 36;
+            grp_Genero.TabStop = false;
+            // 
+            // rdb_Indefinido
+            // 
+            rdb_Indefinido.AutoSize = true;
+            rdb_Indefinido.Location = new Point(6, 54);
+            rdb_Indefinido.Name = "rdb_Indefinido";
+            rdb_Indefinido.Size = new Size(94, 19);
+            rdb_Indefinido.TabIndex = 34;
+            rdb_Indefinido.TabStop = true;
+            rdb_Indefinido.Text = "radioButton3";
+            rdb_Indefinido.UseVisualStyleBackColor = true;
+            // 
+            // rdb_Masculino
+            // 
+            rdb_Masculino.AutoSize = true;
+            rdb_Masculino.Location = new Point(6, 16);
+            rdb_Masculino.Name = "rdb_Masculino";
+            rdb_Masculino.Size = new Size(94, 19);
+            rdb_Masculino.TabIndex = 32;
+            rdb_Masculino.TabStop = true;
+            rdb_Masculino.Text = "radioButton1";
+            rdb_Masculino.UseVisualStyleBackColor = true;
+            // 
+            // rdb_Feminino
+            // 
+            rdb_Feminino.AutoSize = true;
+            rdb_Feminino.Location = new Point(6, 35);
+            rdb_Feminino.Name = "rdb_Feminino";
+            rdb_Feminino.Size = new Size(94, 19);
+            rdb_Feminino.TabIndex = 33;
+            rdb_Feminino.TabStop = true;
+            rdb_Feminino.Text = "radioButton2";
+            rdb_Feminino.UseVisualStyleBackColor = true;
+            // 
             // grp_TemPai
             // 
             grp_TemPai.Controls.Add(chk_TemPai);
-            grp_TemPai.Location = new Point(529, 82);
+            grp_TemPai.Location = new Point(6, 145);
             grp_TemPai.Name = "grp_TemPai";
-            grp_TemPai.Size = new Size(245, 63);
+            grp_TemPai.Size = new Size(211, 41);
             grp_TemPai.TabIndex = 9;
             grp_TemPai.TabStop = false;
             // 
             // chk_TemPai
             // 
             chk_TemPai.AutoSize = true;
-            chk_TemPai.Location = new Point(17, 16);
+            chk_TemPai.Location = new Point(12, 14);
             chk_TemPai.Name = "chk_TemPai";
             chk_TemPai.Size = new Size(83, 19);
             chk_TemPai.TabIndex = 0;
@@ -409,6 +439,8 @@
             grp_codigo.PerformLayout();
             grp_dadosPessoais.ResumeLayout(false);
             grp_dadosPessoais.PerformLayout();
+            grp_Genero.ResumeLayout(false);
+            grp_Genero.PerformLayout();
             grp_TemPai.ResumeLayout(false);
             grp_TemPai.PerformLayout();
             grp_endereco.ResumeLayout(false);
@@ -455,5 +487,11 @@
         private Label lbl_Cidade;
         private GroupBox grp_TemPai;
         private CheckBox chk_TemPai;
+        private RadioButton rdb_Masculino;
+        private RadioButton rdb_Feminino;
+        private RadioButton radioButton4;
+        private GroupBox grp_Genero;
+        private RadioButton rdb_Indefinido;
+        private GroupBox groupBox2;
     }
 }
