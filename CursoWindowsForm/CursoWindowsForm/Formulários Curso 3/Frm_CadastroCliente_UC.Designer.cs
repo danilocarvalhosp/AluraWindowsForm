@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_CadastroCliente_UC));
             lbl_CPF = new Label();
             txt_CPF = new TextBox();
             txt_nomeCliente = new TextBox();
@@ -56,21 +57,29 @@
             grp_TemPai = new GroupBox();
             chk_TemPai = new CheckBox();
             grp_endereco = new GroupBox();
+            cmb_Estados = new ComboBox();
             txt_Cidade = new TextBox();
             lbl_Cidade = new Label();
+            lbl_estado = new Label();
             txt_bairro = new TextBox();
             lbl_bairro = new Label();
             txt_complemento = new TextBox();
             lbl_complemento = new Label();
             grp_outros = new GroupBox();
-            lbl_estado = new Label();
-            cmb_Estados = new ComboBox();
+            toolStrip1 = new ToolStrip();
+            novaToolStripButton = new ToolStripButton();
+            abrirToolStripButton = new ToolStripButton();
+            salvarToolStripButton = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            ApagaToolStripButton = new ToolStripButton();
+            LimparToolStripButton = new ToolStripButton();
             grp_codigo.SuspendLayout();
             grp_dadosPessoais.SuspendLayout();
             grp_Genero.SuspendLayout();
             grp_TemPai.SuspendLayout();
             grp_endereco.SuspendLayout();
             grp_outros.SuspendLayout();
+            toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // lbl_CPF
@@ -233,7 +242,7 @@
             // grp_codigo
             // 
             grp_codigo.Controls.Add(txt_codigoCliente);
-            grp_codigo.Location = new Point(12, 14);
+            grp_codigo.Location = new Point(12, 56);
             grp_codigo.Name = "grp_codigo";
             grp_codigo.Size = new Size(194, 52);
             grp_codigo.TabIndex = 28;
@@ -252,7 +261,7 @@
             grp_dadosPessoais.Controls.Add(lbl_nomeMae);
             grp_dadosPessoais.Controls.Add(txt_CPF);
             grp_dadosPessoais.Controls.Add(lbl_CPF);
-            grp_dadosPessoais.Location = new Point(12, 65);
+            grp_dadosPessoais.Location = new Point(12, 107);
             grp_dadosPessoais.Name = "grp_dadosPessoais";
             grp_dadosPessoais.Size = new Size(780, 195);
             grp_dadosPessoais.TabIndex = 29;
@@ -337,12 +346,20 @@
             grp_endereco.Controls.Add(lbl_CEP);
             grp_endereco.Controls.Add(txt_logradouro);
             grp_endereco.Controls.Add(lbl_logradouro);
-            grp_endereco.Location = new Point(12, 260);
+            grp_endereco.Location = new Point(12, 302);
             grp_endereco.Name = "grp_endereco";
             grp_endereco.Size = new Size(780, 150);
             grp_endereco.TabIndex = 30;
             grp_endereco.TabStop = false;
             grp_endereco.Text = "groupBox1";
+            // 
+            // cmb_Estados
+            // 
+            cmb_Estados.FormattingEnabled = true;
+            cmb_Estados.Location = new Point(283, 121);
+            cmb_Estados.Name = "cmb_Estados";
+            cmb_Estados.Size = new Size(491, 23);
+            cmb_Estados.TabIndex = 27;
             // 
             // txt_Cidade
             // 
@@ -359,6 +376,15 @@
             lbl_Cidade.Size = new Size(38, 15);
             lbl_Cidade.TabIndex = 26;
             lbl_Cidade.Text = "label1";
+            // 
+            // lbl_estado
+            // 
+            lbl_estado.AutoSize = true;
+            lbl_estado.Location = new Point(283, 105);
+            lbl_estado.Name = "lbl_estado";
+            lbl_estado.Size = new Size(38, 15);
+            lbl_estado.TabIndex = 24;
+            lbl_estado.Text = "label1";
             // 
             // txt_bairro
             // 
@@ -400,41 +426,84 @@
             grp_outros.Controls.Add(lbl_rendaFamiliar);
             grp_outros.Controls.Add(lbl_profissao);
             grp_outros.Controls.Add(txt_profissao);
-            grp_outros.Location = new Point(12, 410);
+            grp_outros.Location = new Point(12, 452);
             grp_outros.Name = "grp_outros";
             grp_outros.Size = new Size(780, 107);
             grp_outros.TabIndex = 31;
             grp_outros.TabStop = false;
             grp_outros.Text = "groupBox1";
             // 
-            // lbl_estado
+            // toolStrip1
             // 
-            lbl_estado.AutoSize = true;
-            lbl_estado.Location = new Point(283, 105);
-            lbl_estado.Name = "lbl_estado";
-            lbl_estado.Size = new Size(38, 15);
-            lbl_estado.TabIndex = 24;
-            lbl_estado.Text = "label1";
+            toolStrip1.Items.AddRange(new ToolStripItem [] { novaToolStripButton, abrirToolStripButton, salvarToolStripButton, toolStripSeparator1, ApagaToolStripButton, LimparToolStripButton });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(802, 25);
+            toolStrip1.TabIndex = 32;
+            toolStrip1.Text = "toolStrip1";
             // 
-            // cmb_Estados
+            // novaToolStripButton
             // 
-            cmb_Estados.FormattingEnabled = true;
-            cmb_Estados.Location = new Point(283, 121);
-            cmb_Estados.Name = "cmb_Estados";
-            cmb_Estados.Size = new Size(491, 23);
-            cmb_Estados.TabIndex = 27;
+            novaToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            novaToolStripButton.Image = (Image) resources.GetObject("novaToolStripButton.Image");
+            novaToolStripButton.ImageTransparentColor = Color.Magenta;
+            novaToolStripButton.Name = "novaToolStripButton";
+            novaToolStripButton.Size = new Size(23, 22);
+            novaToolStripButton.Text = "&Nova";
+            // 
+            // abrirToolStripButton
+            // 
+            abrirToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            abrirToolStripButton.Image = (Image) resources.GetObject("abrirToolStripButton.Image");
+            abrirToolStripButton.ImageTransparentColor = Color.Magenta;
+            abrirToolStripButton.Name = "abrirToolStripButton";
+            abrirToolStripButton.Size = new Size(23, 22);
+            abrirToolStripButton.Text = "&Abrir";
+            // 
+            // salvarToolStripButton
+            // 
+            salvarToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            salvarToolStripButton.Image = (Image) resources.GetObject("salvarToolStripButton.Image");
+            salvarToolStripButton.ImageTransparentColor = Color.Magenta;
+            salvarToolStripButton.Name = "salvarToolStripButton";
+            salvarToolStripButton.Size = new Size(23, 22);
+            salvarToolStripButton.Text = "&Salvar";
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 25);
+            // 
+            // ApagaToolStripButton
+            // 
+            ApagaToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            ApagaToolStripButton.Image = Properties.Resources.ExcluirBarra;
+            ApagaToolStripButton.ImageTransparentColor = Color.Magenta;
+            ApagaToolStripButton.Name = "ApagaToolStripButton";
+            ApagaToolStripButton.Size = new Size(23, 22);
+            ApagaToolStripButton.Text = "toolStripButton1";
+            // 
+            // LimparToolStripButton
+            // 
+            LimparToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            LimparToolStripButton.Image = Properties.Resources.LimparBarra;
+            LimparToolStripButton.ImageTransparentColor = Color.Magenta;
+            LimparToolStripButton.Name = "LimparToolStripButton";
+            LimparToolStripButton.Size = new Size(23, 22);
+            LimparToolStripButton.Text = "toolStripButton1";
             // 
             // Frm_CadastroCliente_UC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
+            Controls.Add(toolStrip1);
             Controls.Add(grp_outros);
             Controls.Add(grp_endereco);
             Controls.Add(grp_dadosPessoais);
             Controls.Add(grp_codigo);
             Name = "Frm_CadastroCliente_UC";
-            Size = new Size(802, 530);
+            Size = new Size(802, 571);
             grp_codigo.ResumeLayout(false);
             grp_codigo.PerformLayout();
             grp_dadosPessoais.ResumeLayout(false);
@@ -447,7 +516,10 @@
             grp_endereco.PerformLayout();
             grp_outros.ResumeLayout(false);
             grp_outros.PerformLayout();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -493,5 +565,12 @@
         private GroupBox groupBox2;
         private ComboBox cmb_Estados;
         private Label lbl_estado;
+        private ToolStrip toolStrip1;
+        private ToolStripButton novaToolStripButton;
+        private ToolStripButton abrirToolStripButton;
+        private ToolStripButton salvarToolStripButton;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripButton ApagaToolStripButton;
+        private ToolStripButton LimparToolStripButton;
     }
 }
