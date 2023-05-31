@@ -38,6 +38,11 @@ namespace CursoWindowsForm
             rdb_Feminino.Text = "Feminino";
             rdb_Indefinido.Text = "Indefinido";
             grp_Genero.Text = "Gênero";
+
+            cmb_Estados.Items.Clear();
+            cmb_Estados.Items.Add("Acre (AC)");
+            cmb_Estados.Items.Add("Alagoas (AL)");
+            cmb_Estados.Items.Add("Amapá (AP)");
         }
 
         private void chk_TemPai_CheckedChanged(object sender, EventArgs e)

@@ -58,13 +58,13 @@
             grp_endereco = new GroupBox();
             txt_Cidade = new TextBox();
             lbl_Cidade = new Label();
-            txt_estado = new TextBox();
-            lbl_estado = new Label();
             txt_bairro = new TextBox();
             lbl_bairro = new Label();
             txt_complemento = new TextBox();
             lbl_complemento = new Label();
             grp_outros = new GroupBox();
+            lbl_estado = new Label();
+            cmb_Estados = new ComboBox();
             grp_codigo.SuspendLayout();
             grp_dadosPessoais.SuspendLayout();
             grp_Genero.SuspendLayout();
@@ -325,9 +325,9 @@
             // 
             // grp_endereco
             // 
+            grp_endereco.Controls.Add(cmb_Estados);
             grp_endereco.Controls.Add(txt_Cidade);
             grp_endereco.Controls.Add(lbl_Cidade);
-            grp_endereco.Controls.Add(txt_estado);
             grp_endereco.Controls.Add(lbl_estado);
             grp_endereco.Controls.Add(txt_bairro);
             grp_endereco.Controls.Add(lbl_bairro);
@@ -359,23 +359,6 @@
             lbl_Cidade.Size = new Size(38, 15);
             lbl_Cidade.TabIndex = 26;
             lbl_Cidade.Text = "label1";
-            // 
-            // txt_estado
-            // 
-            txt_estado.Anchor =  AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txt_estado.Location = new Point(283, 121);
-            txt_estado.Name = "txt_estado";
-            txt_estado.Size = new Size(491, 23);
-            txt_estado.TabIndex = 12;
-            // 
-            // lbl_estado
-            // 
-            lbl_estado.AutoSize = true;
-            lbl_estado.Location = new Point(283, 105);
-            lbl_estado.Name = "lbl_estado";
-            lbl_estado.Size = new Size(38, 15);
-            lbl_estado.TabIndex = 24;
-            lbl_estado.Text = "label1";
             // 
             // txt_bairro
             // 
@@ -423,6 +406,23 @@
             grp_outros.TabIndex = 31;
             grp_outros.TabStop = false;
             grp_outros.Text = "groupBox1";
+            // 
+            // lbl_estado
+            // 
+            lbl_estado.AutoSize = true;
+            lbl_estado.Location = new Point(283, 105);
+            lbl_estado.Name = "lbl_estado";
+            lbl_estado.Size = new Size(38, 15);
+            lbl_estado.TabIndex = 24;
+            lbl_estado.Text = "label1";
+            // 
+            // cmb_Estados
+            // 
+            cmb_Estados.FormattingEnabled = true;
+            cmb_Estados.Location = new Point(283, 121);
+            cmb_Estados.Name = "cmb_Estados";
+            cmb_Estados.Size = new Size(491, 23);
+            cmb_Estados.TabIndex = 27;
             // 
             // Frm_CadastroCliente_UC
             // 
@@ -476,8 +476,6 @@
         private GroupBox grp_codigo;
         private GroupBox grp_dadosPessoais;
         private GroupBox grp_endereco;
-        private TextBox txt_estado;
-        private Label lbl_estado;
         private TextBox txt_bairro;
         private Label lbl_bairro;
         private TextBox txt_complemento;
@@ -493,5 +491,7 @@
         private GroupBox grp_Genero;
         private RadioButton rdb_Indefinido;
         private GroupBox groupBox2;
+        private ComboBox cmb_Estados;
+        private Label lbl_estado;
     }
 }
