@@ -61,3 +61,47 @@ C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindows
 C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.pdb
 C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.genruntimeconfig.cache
 C:\Users\cpd4\Videos\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\ref\CursoWindowsForm.dll
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\bin\Release\net6.0-windows\CursoWindowsForm.exe
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\bin\Release\net6.0-windows\CursoWindowsForm.deps.json
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\bin\Release\net6.0-windows\CursoWindowsForm.runtimeconfig.json
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\bin\Release\net6.0-windows\CursoWindowsForm.dll
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\bin\Release\net6.0-windows\CursoWindowsForm.pdb
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\bin\Release\net6.0-windows\CursoWindowsFormsBiblioteca.dll
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\bin\Release\net6.0-windows\CursoWindowsFormsBiblioteca.pdb
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.csproj.AssemblyReference.cache
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_DemonstracaoKey.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_HelloWorld.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_Mascara.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_ValidaCPF.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_ValidaCPF2.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_ValidaSenha.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_ArquivoImagem_UC.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_DemonstraçãoKey_UC.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_HelloWorld_UC.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_Login.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_Mascara_UC.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_Questao.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_ValidaCPF2_UC.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_ValidaCPF_UC.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_ValidaSenha_UC.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.Frm_CadastroCliente_UC.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_MenuFlutuante.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_MouseCaptura.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_MouseCursor.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_MouseEventos.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_Principal.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_Principal_Menu.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_Principal_Menu_MDI.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.frm_Principal_Menu_UC.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.Properties.Resources.resources
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.csproj.GenerateResource.cache
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.AssemblyInfoInputs.cache
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.AssemblyInfo.cs
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.csproj.CoreCompileInputs.cache
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.csproj.CopyComplete
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.dll
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\refint\CursoWindowsForm.dll
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.pdb
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.genruntimeconfig.cache
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\ref\CursoWindowsForm.dll
