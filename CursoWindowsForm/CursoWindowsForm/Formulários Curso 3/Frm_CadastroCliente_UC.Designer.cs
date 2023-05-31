@@ -450,6 +450,7 @@
             novaToolStripButton.Name = "novaToolStripButton";
             novaToolStripButton.Size = new Size(23, 22);
             novaToolStripButton.Text = "&Novo";
+            novaToolStripButton.Click += novaToolStripButton_Click;
             // 
             // abrirToolStripButton
             // 
@@ -459,6 +460,7 @@
             abrirToolStripButton.Name = "abrirToolStripButton";
             abrirToolStripButton.Size = new Size(23, 22);
             abrirToolStripButton.Text = "&Abrir";
+            abrirToolStripButton.Click += abrirToolStripButton_Click;
             // 
             // salvarToolStripButton
             // 
@@ -468,6 +470,7 @@
             salvarToolStripButton.Name = "salvarToolStripButton";
             salvarToolStripButton.Size = new Size(23, 22);
             salvarToolStripButton.Text = "&Salvar";
+            salvarToolStripButton.Click += salvarToolStripButton_Click;
             // 
             // toolStripSeparator1
             // 
@@ -482,6 +485,7 @@
             ApagaToolStripButton.Name = "ApagaToolStripButton";
             ApagaToolStripButton.Size = new Size(23, 22);
             ApagaToolStripButton.Text = "toolStripButton1";
+            ApagaToolStripButton.Click += ApagaToolStripButton_Click;
             // 
             // LimparToolStripButton
             // 

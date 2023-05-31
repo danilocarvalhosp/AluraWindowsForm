@@ -65,9 +65,30 @@ namespace CursoWindowsForm
             }
         }
 
+        private void novaToolStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Efetuei um clique sobre o botão NOVO");
+        }
+
+        private void abrirToolStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Efetuei um clique sobre o botão ABRIR");
+        }
+
+        private void salvarToolStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Efetuei um clique sobre o botão SALVAR");
+        }
+
+        private void ApagaToolStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Efetuei um clique sobre o botão APAGAR");
+        }
+
         private void LimparToolStripButton_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Efetuei um clique sobre o botão LIMPAR");
         }
+
     }
 }
