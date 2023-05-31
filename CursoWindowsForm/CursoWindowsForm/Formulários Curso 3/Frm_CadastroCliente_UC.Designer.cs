@@ -66,7 +66,7 @@
             txt_complemento = new TextBox();
             lbl_complemento = new Label();
             grp_outros = new GroupBox();
-            toolStrip1 = new ToolStrip();
+            Tls_Principal = new ToolStrip();
             novaToolStripButton = new ToolStripButton();
             abrirToolStripButton = new ToolStripButton();
             salvarToolStripButton = new ToolStripButton();
@@ -79,7 +79,7 @@
             grp_TemPai.SuspendLayout();
             grp_endereco.SuspendLayout();
             grp_outros.SuspendLayout();
-            toolStrip1.SuspendLayout();
+            Tls_Principal.SuspendLayout();
             SuspendLayout();
             // 
             // lbl_CPF
@@ -433,14 +433,14 @@
             grp_outros.TabStop = false;
             grp_outros.Text = "groupBox1";
             // 
-            // toolStrip1
+            // Tls_Principal
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem [] { novaToolStripButton, abrirToolStripButton, salvarToolStripButton, toolStripSeparator1, ApagaToolStripButton, LimparToolStripButton });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(802, 25);
-            toolStrip1.TabIndex = 32;
-            toolStrip1.Text = "toolStrip1";
+            Tls_Principal.Items.AddRange(new ToolStripItem [] { novaToolStripButton, abrirToolStripButton, salvarToolStripButton, toolStripSeparator1, ApagaToolStripButton, LimparToolStripButton });
+            Tls_Principal.Location = new Point(0, 0);
+            Tls_Principal.Name = "Tls_Principal";
+            Tls_Principal.Size = new Size(802, 25);
+            Tls_Principal.TabIndex = 32;
+            Tls_Principal.Text = "toolStrip1";
             // 
             // novaToolStripButton
             // 
@@ -449,7 +449,7 @@
             novaToolStripButton.ImageTransparentColor = Color.Magenta;
             novaToolStripButton.Name = "novaToolStripButton";
             novaToolStripButton.Size = new Size(23, 22);
-            novaToolStripButton.Text = "&Nova";
+            novaToolStripButton.Text = "&Novo";
             // 
             // abrirToolStripButton
             // 
@@ -491,13 +491,14 @@
             LimparToolStripButton.Name = "LimparToolStripButton";
             LimparToolStripButton.Size = new Size(23, 22);
             LimparToolStripButton.Text = "toolStripButton1";
+            LimparToolStripButton.Click += LimparToolStripButton_Click;
             // 
             // Frm_CadastroCliente_UC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            Controls.Add(toolStrip1);
+            Controls.Add(Tls_Principal);
             Controls.Add(grp_outros);
             Controls.Add(grp_endereco);
             Controls.Add(grp_dadosPessoais);
@@ -516,8 +517,8 @@
             grp_endereco.PerformLayout();
             grp_outros.ResumeLayout(false);
             grp_outros.PerformLayout();
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
+            Tls_Principal.ResumeLayout(false);
+            Tls_Principal.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -565,7 +566,7 @@
         private GroupBox groupBox2;
         private ComboBox cmb_Estados;
         private Label lbl_estado;
-        private ToolStrip toolStrip1;
+        private ToolStrip Tls_Principal;
         private ToolStripButton novaToolStripButton;
         private ToolStripButton abrirToolStripButton;
         private ToolStripButton salvarToolStripButton;

@@ -43,6 +43,12 @@ namespace CursoWindowsForm
             cmb_Estados.Items.Add("Acre (AC)");
             cmb_Estados.Items.Add("Alagoas (AL)");
             cmb_Estados.Items.Add("Amapá (AP)");
+
+            Tls_Principal.Items [0].ToolTipText = "Incluir na base de dados um novo cliente";
+            Tls_Principal.Items [1].ToolTipText = "Capturar um cliente já cadastrado na base";
+            Tls_Principal.Items [2].ToolTipText = "Atualizar o cliente já existente";
+            Tls_Principal.Items [4].ToolTipText = "Apagar o cliente selecionado";
+            Tls_Principal.Items [5].ToolTipText = "Limpar dados na tela de entrada de dados";
         }
 
         private void chk_TemPai_CheckedChanged(object sender, EventArgs e)
@@ -57,6 +63,11 @@ namespace CursoWindowsForm
                 txt_nomePai.Enabled = true;
                 lbl_nomePai.Enabled = true;
             }
+        }
+
+        private void LimparToolStripButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
