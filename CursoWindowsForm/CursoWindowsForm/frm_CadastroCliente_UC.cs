@@ -34,6 +34,21 @@ namespace CursoWindowsForm
             lbl_profissao.Text = "Profissão";
             lbl_rendaFamiliar.Text = "Renda Familiar";
             lbl_telefone.Text = "Telefone";
+            chk_TemPai.Text = "Pai desconhecido";
+        }
+
+        private void chk_TemPai_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_TemPai.Checked)
+            {
+                txt_nomePai.Enabled = false;
+                lbl_nomePai.Enabled = false;
+            }
+            else
+            {
+                txt_nomePai.Enabled = true;
+                lbl_nomePai.Enabled = true;
+            }
         }
     }
 }

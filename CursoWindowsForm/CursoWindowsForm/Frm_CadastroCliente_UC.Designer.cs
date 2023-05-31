@@ -51,7 +51,11 @@
             txt_codigoCliente = new TextBox();
             grp_codigo = new GroupBox();
             grp_dadosPessoais = new GroupBox();
+            grp_TemPai = new GroupBox();
+            chk_TemPai = new CheckBox();
             grp_endereco = new GroupBox();
+            txt_Cidade = new TextBox();
+            lbl_Cidade = new Label();
             txt_estado = new TextBox();
             lbl_estado = new Label();
             txt_bairro = new TextBox();
@@ -59,10 +63,9 @@
             txt_complemento = new TextBox();
             lbl_complemento = new Label();
             grp_outros = new GroupBox();
-            txt_Cidade = new TextBox();
-            lbl_Cidade = new Label();
             grp_codigo.SuspendLayout();
             grp_dadosPessoais.SuspendLayout();
+            grp_TemPai.SuspendLayout();
             grp_endereco.SuspendLayout();
             grp_outros.SuspendLayout();
             SuspendLayout();
@@ -106,7 +109,7 @@
             txt_nomePai.Anchor =  AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txt_nomePai.Location = new Point(6, 82);
             txt_nomePai.Name = "txt_nomePai";
-            txt_nomePai.Size = new Size(768, 23);
+            txt_nomePai.Size = new Size(508, 23);
             txt_nomePai.TabIndex = 3;
             // 
             // lbl_nomePai
@@ -123,7 +126,7 @@
             txt_nomeMae.Anchor =  AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txt_nomeMae.Location = new Point(6, 122);
             txt_nomeMae.Name = "txt_nomeMae";
-            txt_nomeMae.Size = new Size(768, 23);
+            txt_nomeMae.Size = new Size(508, 23);
             txt_nomeMae.TabIndex = 4;
             // 
             // lbl_nomeMae
@@ -252,6 +255,7 @@
             // 
             // grp_dadosPessoais
             // 
+            grp_dadosPessoais.Controls.Add(grp_TemPai);
             grp_dadosPessoais.Controls.Add(txt_nomeCliente);
             grp_dadosPessoais.Controls.Add(lbl_nomeCliente);
             grp_dadosPessoais.Controls.Add(txt_nomePai);
@@ -268,6 +272,26 @@
             grp_dadosPessoais.TabIndex = 29;
             grp_dadosPessoais.TabStop = false;
             grp_dadosPessoais.Text = "groupBox1";
+            // 
+            // grp_TemPai
+            // 
+            grp_TemPai.Controls.Add(chk_TemPai);
+            grp_TemPai.Location = new Point(529, 82);
+            grp_TemPai.Name = "grp_TemPai";
+            grp_TemPai.Size = new Size(245, 63);
+            grp_TemPai.TabIndex = 9;
+            grp_TemPai.TabStop = false;
+            // 
+            // chk_TemPai
+            // 
+            chk_TemPai.AutoSize = true;
+            chk_TemPai.Location = new Point(17, 16);
+            chk_TemPai.Name = "chk_TemPai";
+            chk_TemPai.Size = new Size(83, 19);
+            chk_TemPai.TabIndex = 0;
+            chk_TemPai.Text = "checkBox1";
+            chk_TemPai.UseVisualStyleBackColor = true;
+            chk_TemPai.CheckedChanged += chk_TemPai_CheckedChanged;
             // 
             // grp_endereco
             // 
@@ -289,6 +313,22 @@
             grp_endereco.TabIndex = 30;
             grp_endereco.TabStop = false;
             grp_endereco.Text = "groupBox1";
+            // 
+            // txt_Cidade
+            // 
+            txt_Cidade.Location = new Point(6, 121);
+            txt_Cidade.Name = "txt_Cidade";
+            txt_Cidade.Size = new Size(271, 23);
+            txt_Cidade.TabIndex = 11;
+            // 
+            // lbl_Cidade
+            // 
+            lbl_Cidade.AutoSize = true;
+            lbl_Cidade.Location = new Point(4, 105);
+            lbl_Cidade.Name = "lbl_Cidade";
+            lbl_Cidade.Size = new Size(38, 15);
+            lbl_Cidade.TabIndex = 26;
+            lbl_Cidade.Text = "label1";
             // 
             // txt_estado
             // 
@@ -354,22 +394,6 @@
             grp_outros.TabStop = false;
             grp_outros.Text = "groupBox1";
             // 
-            // txt_Cidade
-            // 
-            txt_Cidade.Location = new Point(6, 121);
-            txt_Cidade.Name = "txt_Cidade";
-            txt_Cidade.Size = new Size(271, 23);
-            txt_Cidade.TabIndex = 11;
-            // 
-            // lbl_Cidade
-            // 
-            lbl_Cidade.AutoSize = true;
-            lbl_Cidade.Location = new Point(4, 105);
-            lbl_Cidade.Name = "lbl_Cidade";
-            lbl_Cidade.Size = new Size(38, 15);
-            lbl_Cidade.TabIndex = 26;
-            lbl_Cidade.Text = "label1";
-            // 
             // Frm_CadastroCliente_UC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -385,6 +409,8 @@
             grp_codigo.PerformLayout();
             grp_dadosPessoais.ResumeLayout(false);
             grp_dadosPessoais.PerformLayout();
+            grp_TemPai.ResumeLayout(false);
+            grp_TemPai.PerformLayout();
             grp_endereco.ResumeLayout(false);
             grp_endereco.PerformLayout();
             grp_outros.ResumeLayout(false);
@@ -427,5 +453,7 @@
         private GroupBox grp_outros;
         private TextBox txt_Cidade;
         private Label lbl_Cidade;
+        private GroupBox grp_TemPai;
+        private CheckBox chk_TemPai;
     }
 }
