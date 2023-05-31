@@ -21,6 +21,7 @@ namespace CursoWindowsForm
             grp_endereco.Text = "Endereço";
             grp_outros.Text = "Outros";
             lbl_bairro.Text = "Bairro";
+            lbl_Cidade.Text = "Cidade";
             lbl_CEP.Text = "CEP";
             lbl_complemento.Text = "Complemento";
             lbl_CPF.Text = "CPF";

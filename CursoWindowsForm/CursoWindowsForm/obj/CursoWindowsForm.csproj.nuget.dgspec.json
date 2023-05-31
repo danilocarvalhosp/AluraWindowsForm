@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cpd4\\Videos\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsForm\\CursoWindowsForm.csproj": {}
+    "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsForm\\CursoWindowsForm.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cpd4\\Videos\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsFormsBiblioteca\\CursoWindowsFormsBiblioteca.csproj": {
+    "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsFormsBiblioteca\\CursoWindowsFormsBiblioteca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cpd4\\Videos\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsFormsBiblioteca\\CursoWindowsFormsBiblioteca.csproj",
+        "projectUniqueName": "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsFormsBiblioteca\\CursoWindowsFormsBiblioteca.csproj",
         "projectName": "CursoWindowsFormsBiblioteca",
-        "projectPath": "C:\\Users\\cpd4\\Videos\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsFormsBiblioteca\\CursoWindowsFormsBiblioteca.csproj",
-        "packagesPath": "C:\\Users\\cpd4\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cpd4\\Videos\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsFormsBiblioteca\\obj\\",
+        "projectPath": "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsFormsBiblioteca\\CursoWindowsFormsBiblioteca.csproj",
+        "packagesPath": "C:\\Users\\Danilo\\.nuget\\packages\\",
+        "outputPath": "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsFormsBiblioteca\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\cpd4\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Danilo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -60,25 +55,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\cpd4\\Videos\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsForm\\CursoWindowsForm.csproj": {
+    "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsForm\\CursoWindowsForm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cpd4\\Videos\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsForm\\CursoWindowsForm.csproj",
+        "projectUniqueName": "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsForm\\CursoWindowsForm.csproj",
         "projectName": "CursoWindowsForm",
-        "projectPath": "C:\\Users\\cpd4\\Videos\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsForm\\CursoWindowsForm.csproj",
-        "packagesPath": "C:\\Users\\cpd4\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cpd4\\Videos\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsForm\\obj\\",
+        "projectPath": "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsForm\\CursoWindowsForm.csproj",
+        "packagesPath": "C:\\Users\\Danilo\\.nuget\\packages\\",
+        "outputPath": "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsForm\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\cpd4\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Danilo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,15 +77,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\cpd4\\Videos\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsFormsBiblioteca\\CursoWindowsFormsBiblioteca.csproj": {
-                "projectPath": "C:\\Users\\cpd4\\Videos\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsFormsBiblioteca\\CursoWindowsFormsBiblioteca.csproj"
+              "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsFormsBiblioteca\\CursoWindowsFormsBiblioteca.csproj": {
+                "projectPath": "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsFormsBiblioteca\\CursoWindowsFormsBiblioteca.csproj"
               }
             }
           }
@@ -127,7 +117,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
