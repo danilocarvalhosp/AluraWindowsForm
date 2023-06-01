@@ -11,7 +11,9 @@ namespace CursoWindowsFormsBiblioteca.Classes
     {
         public class Unit
         {
-            [Required(ErrorMessage = "Código do Cliente é obrigatório.")]
+            [Required(ErrorMessage = "Código do Cliente é obrigatório")]
+            [RegularExpression("([0-9]+)", ErrorMessage = "Código do Cliente somente aceita valores numéricos")]
+            [StringLength(6, MinimumLength = 6, ErrorMessage = "Código do Cliente deve ter 6 dígitos")]
             public string? Id { get; set; }
             public string? Nome { get; set; }
             public string? NomePai { get; set; }
