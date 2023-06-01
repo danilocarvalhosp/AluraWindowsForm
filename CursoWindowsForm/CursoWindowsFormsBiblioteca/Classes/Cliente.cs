@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace CursoWindowsFormsBiblioteca.Classes
 {
@@ -10,6 +11,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
     {
         public class Unit
         {
+            [Required(ErrorMessage = "Código do Cliente é obrigatório.")]
             public string? Id { get; set; }
             public string? Nome { get; set; }
             public string? NomePai { get; set; }
