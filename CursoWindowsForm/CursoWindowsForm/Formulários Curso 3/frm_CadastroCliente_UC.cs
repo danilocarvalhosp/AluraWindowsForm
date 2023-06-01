@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CursoWindowsFormsBiblioteca.Classes;
+using System.ComponentModel.DataAnnotations;
 
 namespace CursoWindowsForm
 {
@@ -67,7 +69,18 @@ namespace CursoWindowsForm
 
         private void novaToolStripButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Efetuei um clique sobre o botão NOVO");
+            try
+            {
+                Cliente.Unit C = new Cliente.Unit();
+                C.Id = txt_codigoCliente.Text;
+                C.ValidaClasse();
+
+                MessageBox.Show("Classe foi inicializada sem erros", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (ValidationException ex)
+            {
+                MessageBox.Show(ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void abrirToolStripButton_Click(object sender, EventArgs e)

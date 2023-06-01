@@ -129,7 +129,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "CursoWindowsFormsBiblioteca >= 1.0.0"
+      "CursoWindowsFormsBiblioteca >= 1.0.0",
+      "System.ComponentModel.Annotations >= 5.0.0"
     ]
   },
   "packageFolders": {
@@ -174,6 +175,12 @@
     "frameworks": {
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "System.ComponentModel.Annotations": {
+            "target": "Package",
+            "version": "[5.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
