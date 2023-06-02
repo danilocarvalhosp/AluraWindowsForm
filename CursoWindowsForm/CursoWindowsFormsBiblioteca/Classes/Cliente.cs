@@ -49,6 +49,9 @@ namespace CursoWindowsFormsBiblioteca.Classes
             [StringLength(50, ErrorMessage = "O bairro deve ter no máximo 50 caracteres")]
             public string? Bairro { get; set; }
 
+            [StringLength(50, ErrorMessage = "O complemento deve ter no máximo 50 caracteres")]
+            public string? Complemento { get; set; }
+
             [Required(ErrorMessage = "A cidade é obrigatória")]
             [StringLength(50, ErrorMessage = "A cidade deve ter no máximo 50 caracteres")]
             public string? Cidade { get; set; }

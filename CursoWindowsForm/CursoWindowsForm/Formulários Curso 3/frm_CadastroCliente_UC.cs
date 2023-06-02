@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CursoWindowsFormsBiblioteca.Classes;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.VisualBasic;
 
 namespace CursoWindowsForm
 {
@@ -72,6 +73,7 @@ namespace CursoWindowsForm
             try
             {
                 Cliente.Unit C = new Cliente.Unit();
+                C = LeituraFormulario();
                 C.Id = txt_codigoCliente.Text;
                 C.ValidaClasse();
 
@@ -103,5 +105,70 @@ namespace CursoWindowsForm
             MessageBox.Show("Efetuei um clique sobre o botão LIMPAR");
         }
 
+        Cliente.Unit LeituraFormulario()
+        {
+            Cliente.Unit C = new Cliente.Unit();
+
+            C.Id = txt_codigoCliente.Text;
+            C.Nome = txt_nomeCliente.Text;
+            C.NomeMae = txt_nomeMae.Text;
+            C.NomePai = txt_nomePai.Text;
+
+            if (chk_TemPai.Checked)
+            {
+                C.TemPai = true;
+            }
+            else
+            {
+                C.TemPai = false;
+            }
+
+            if (rdb_Masculino.Checked)
+            {
+                C.Genero = 0;
+            }
+            else if (rdb_Feminino.Checked)
+            {
+                C.Genero = 1;
+            }
+            else
+            {
+                C.Genero = 2;
+            }
+
+            C.Cpf = txt_CPF.Text;
+            C.Cep = txt_CEP.Text;
+            C.Logradouro = txt_logradouro.Text;
+            C.Complemento = txt_complemento.Text;
+            C.Bairro = txt_bairro.Text;
+            C.Cidade = txt_Cidade.Text;
+
+            if(cmb_Estados.SelectedIndex < 0)
+            {
+                C.Estado = "";
+            }
+            else
+            {
+                C.Estado = cmb_Estados.Items [cmb_Estados.SelectedIndex].ToString ();
+            }
+
+            C.Telefone = txt_telefone.Text;
+            C.Profissao = txt_profissao.Text;
+
+            if (Information.IsNumeric(txt_rendaFamiliar.Text))
+            {
+                Double vRenda = Convert.ToDouble(txt_rendaFamiliar.Text);
+                if (vRenda < 0)
+                {
+                    C.RendaFamiliar = 0;
+                }
+                else
+                {
+                    C.RendaFamiliar = vRenda;
+                }
+            }
+                
+            return C;
+        }
     }
 }

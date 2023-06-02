@@ -9,12 +9,14 @@
       "CursoWindowsForm/1.0.0": {
         "dependencies": {
           "CursoWindowsFormsBiblioteca": "1.0.0",
+          "Microsoft.VisualBasic": "10.3.0",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "runtime": {
           "CursoWindowsForm.dll": {}
         }
       },
+      "Microsoft.VisualBasic/10.3.0": {},
       "System.ComponentModel.Annotations/5.0.0": {},
       "CursoWindowsFormsBiblioteca/1.0.0": {
         "dependencies": {
@@ -31,6 +33,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.VisualBasic/10.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AvMDjmJHjz9bdlvxiSdEHHcWP+sZtp7zwule5ab6DaUbgoBnwCsd7nymj69vSz18ypXuEv3SI7ZUNwbIKrvtMA==",
+      "path": "microsoft.visualbasic/10.3.0",
+      "hashPath": "microsoft.visualbasic.10.3.0.nupkg.sha512"
     },
     "System.ComponentModel.Annotations/5.0.0": {
       "type": "package",
