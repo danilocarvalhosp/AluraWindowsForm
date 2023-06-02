@@ -156,6 +156,7 @@
             txt_CEP.Name = "txt_CEP";
             txt_CEP.Size = new Size(132, 23);
             txt_CEP.TabIndex = 7;
+            txt_CEP.Leave += txt_CEP_Leave;
             // 
             // lbl_CEP
             // 
