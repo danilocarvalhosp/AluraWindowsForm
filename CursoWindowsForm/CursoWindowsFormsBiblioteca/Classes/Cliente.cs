@@ -27,7 +27,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
             [StringLength(50, ErrorMessage = "Código do Cliente deve ter no máximo 50 caracteres")]
             public string? NomeMae { get; set; }
 
-            public bool TemPai { get; set; }
+            public bool NaoTemPai { get; set; }
 
             [Required(ErrorMessage = "O CPF é obrigatório")]
             [RegularExpression("([0-9]+)", ErrorMessage = "O CPF somente aceita valores numéricos")]
@@ -84,6 +84,28 @@ namespace CursoWindowsFormsBiblioteca.Classes
                         sbrErrors.AppendLine(validationResult.ErrorMessage);
                     }
                     throw new ValidationException(sbrErrors.ToString());
+                }
+            }
+
+            public void ValidaComplemento()
+            {
+                if (this.NomePai == this.NomeMae)
+                {
+                    throw new Exception("Nome do Pai e da Mãe não podem ser iguais");
+                }
+
+                if (this.NaoTemPai == false)
+                {
+                    if (this.NomePai == "")
+                    {
+                        throw new Exception("O nome do Pai não pode estar vazio quando a propriedade Pai não estiver marcada");
+                    }
+                }
+
+                bool validaCPF = Cls_Uteis.Valida(this.Cpf);
+                if (validaCPF == false)
+                {
+                    throw new Exception("CPF inválido");
                 }
             }
         }

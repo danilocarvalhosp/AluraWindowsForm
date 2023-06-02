@@ -76,6 +76,7 @@ namespace CursoWindowsForm
                 C = LeituraFormulario();
                 C.Id = txt_codigoCliente.Text;
                 C.ValidaClasse();
+                C.ValidaComplemento();
 
                 MessageBox.Show("Classe foi inicializada sem erros", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -83,6 +84,11 @@ namespace CursoWindowsForm
             {
                 MessageBox.Show(ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void abrirToolStripButton_Click(object sender, EventArgs e)
@@ -116,11 +122,11 @@ namespace CursoWindowsForm
 
             if (chk_TemPai.Checked)
             {
-                C.TemPai = true;
+                C.NaoTemPai = true;
             }
             else
             {
-                C.TemPai = false;
+                C.NaoTemPai = false;
             }
 
             if (rdb_Masculino.Checked)
