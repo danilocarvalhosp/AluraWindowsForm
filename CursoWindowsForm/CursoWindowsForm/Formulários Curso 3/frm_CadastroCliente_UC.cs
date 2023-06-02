@@ -75,6 +75,11 @@ namespace CursoWindowsForm
             {
                 var vJson = Cls_Uteis.GeraJSONCEP("13348263");
 
+                CEP.Unit Cep = new CEP.Unit();
+                Cep = CEP.DesSerializedClassUnit(vJson);
+
+
+
                 Cliente.Unit C = new Cliente.Unit();
                 C = LeituraFormulario();
                 C.Id = txt_codigoCliente.Text;
@@ -152,13 +157,13 @@ namespace CursoWindowsForm
             C.Bairro = txt_bairro.Text;
             C.Cidade = txt_Cidade.Text;
 
-            if(cmb_Estados.SelectedIndex < 0)
+            if (cmb_Estados.SelectedIndex < 0)
             {
                 C.Estado = "";
             }
             else
             {
-                C.Estado = cmb_Estados.Items [cmb_Estados.SelectedIndex].ToString ();
+                C.Estado = cmb_Estados.Items [cmb_Estados.SelectedIndex].ToString();
             }
 
             C.Telefone = txt_telefone.Text;
@@ -176,7 +181,7 @@ namespace CursoWindowsForm
                     C.RendaFamiliar = vRenda;
                 }
             }
-                
+
             return C;
         }
     }

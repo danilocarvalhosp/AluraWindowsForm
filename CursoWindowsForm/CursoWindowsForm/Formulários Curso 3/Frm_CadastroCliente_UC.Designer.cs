@@ -122,7 +122,7 @@
             txt_nomePai.Location = new Point(6, 122);
             txt_nomePai.Name = "txt_nomePai";
             txt_nomePai.Size = new Size(470, 23);
-            txt_nomePai.TabIndex = 3;
+            txt_nomePai.TabIndex = 4;
             // 
             // lbl_nomePai
             // 
@@ -139,7 +139,7 @@
             txt_nomeMae.Location = new Point(6, 84);
             txt_nomeMae.Name = "txt_nomeMae";
             txt_nomeMae.Size = new Size(470, 23);
-            txt_nomeMae.TabIndex = 4;
+            txt_nomeMae.TabIndex = 3;
             // 
             // lbl_nomeMae
             // 

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AoQ57znG9NBH13wRFEIPydmAU/YYQNix13an/z42CnG//Fkv9JtQv3KviZTgQJ7rUuHBvJRONSZPuWl1yIPLPw==",
+  "dgSpecHash": "ggsjcZrdnDG+48H/CO9bNvotJ00xx7Ht8jen35p33fwG42UBx8QP6wGteYC1CNOQnF9IpOTd0oiCGwZlbXY5PA==",
   "success": true,
   "projectFilePath": "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\CursoWindowsFormsBiblioteca\\CursoWindowsFormsBiblioteca.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Danilo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Danilo\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
