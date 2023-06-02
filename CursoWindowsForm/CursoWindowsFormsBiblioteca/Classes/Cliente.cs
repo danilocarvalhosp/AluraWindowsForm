@@ -102,7 +102,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
                     }
                 }
 
-                bool validaCPF = Cls_Uteis.Valida(this.Cpf);
+                bool validaCPF = Cls_Uteis.Valida(Cpf);
                 if (validaCPF == false)
                 {
                     throw new Exception("CPF inválido");

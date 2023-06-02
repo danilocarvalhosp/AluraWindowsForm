@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CursoWindowsFormsBiblioteca.Classes;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.VisualBasic;
+using CursoWindowsFormsBiblioteca;
 
 namespace CursoWindowsForm
 {
@@ -72,6 +73,8 @@ namespace CursoWindowsForm
         {
             try
             {
+                var vJson = Cls_Uteis.GeraJSONCEP("13348263");
+
                 Cliente.Unit C = new Cliente.Unit();
                 C = LeituraFormulario();
                 C.Id = txt_codigoCliente.Text;
