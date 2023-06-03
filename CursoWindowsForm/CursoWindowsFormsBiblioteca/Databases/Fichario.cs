@@ -111,5 +111,32 @@ namespace CursoWindowsFormsBiblioteca.Databases
                 mensagem = "Erro ao buscar o conteúdo do identificador: " + ex.Message;
             }
         }
+
+        public void AlterarCliente(string id, string jsonUnit)
+        {
+            status = true;
+
+            try
+            {
+                if (!File.Exists(diretorio + "\\" + id + ".json"))
+                {
+                    status = false;
+                    mensagem = "Aleração não permitida porque o identificador já existe: " + id;
+                }
+                else
+                {
+                    File.Delete(diretorio + "\\" + id + ".json");
+                    File.WriteAllText(diretorio + "\\" + id + ".json", jsonUnit);
+                    status = true;
+                    mensagem = "Alteração efetuada com sucesso. Identificador: " + id;
+                }
+            }
+            catch (Exception ex)
+            {
+                status = false;
+                mensagem = "Inclusão efetuada com erro: " + ex.Message;
+            }
+        }
+
     }
 }
