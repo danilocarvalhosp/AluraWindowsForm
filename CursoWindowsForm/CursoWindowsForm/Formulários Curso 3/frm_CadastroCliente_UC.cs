@@ -11,7 +11,7 @@ using CursoWindowsFormsBiblioteca.Classes;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.VisualBasic;
 using CursoWindowsFormsBiblioteca;
-using CursoWindowsFormsBiblioteca.Classes.Databases;
+using CursoWindowsFormsBiblioteca.Databases;
 
 namespace CursoWindowsForm
 {
