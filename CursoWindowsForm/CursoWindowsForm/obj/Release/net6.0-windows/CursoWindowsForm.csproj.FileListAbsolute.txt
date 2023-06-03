@@ -105,3 +105,4 @@ E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoW
 E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.pdb
 E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\CursoWindowsForm.genruntimeconfig.cache
 E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\obj\Release\net6.0-windows\ref\CursoWindowsForm.dll
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsForm\CursoWindowsForm\bin\Release\net6.0-windows\Newtonsoft.Json.dll
