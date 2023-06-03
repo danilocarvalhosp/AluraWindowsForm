@@ -11,6 +11,7 @@ using CursoWindowsFormsBiblioteca.Classes;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.VisualBasic;
 using CursoWindowsFormsBiblioteca;
+using CursoWindowsFormsBiblioteca.Classes.Databases;
 
 namespace CursoWindowsForm
 {
@@ -104,7 +105,16 @@ namespace CursoWindowsForm
 
                 string clienteJson = Cliente.SerializedClassUnit(C);
 
-                MessageBox.Show("Cliente irá ser incluído. O conteúdo será: " + clienteJson, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Fichario f = new Fichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
+                if (f.status)
+                {
+                    MessageBox.Show("Ok: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
             }
             catch (ValidationException ex)
             {
@@ -114,7 +124,6 @@ namespace CursoWindowsForm
             {
                 MessageBox.Show(ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void abrirToolStripButton_Click(object sender, EventArgs e)
