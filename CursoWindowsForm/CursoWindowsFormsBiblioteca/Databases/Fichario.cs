@@ -59,7 +59,7 @@ namespace CursoWindowsFormsBiblioteca.Databases
             }
         }
 
-        public string Buscar(string id)
+        public string BuscarCliente(string id)
         {
             status = true;
 
@@ -85,6 +85,31 @@ namespace CursoWindowsFormsBiblioteca.Databases
             }
 
             return "";
+        }
+
+        public void ExcluirCliente(string id)
+        {
+            status = true;
+
+            try
+            {
+                if (!File.Exists(diretorio + "\\" + id + ".json"))
+                {
+                    status = false;
+                    mensagem = "Identificador não existe: " + id;
+                }
+                else
+                {
+                    File.Delete(diretorio + "\\" + id + ".json");
+                    status = true;
+                    mensagem = "Exclusão efetuada com sucesso. Identificador: " + id;
+                }
+            }
+            catch (Exception ex)
+            {
+                status = false;
+                mensagem = "Erro ao buscar o conteúdo do identificador: " + ex.Message;
+            }
         }
     }
 }

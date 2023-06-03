@@ -113,6 +113,10 @@ namespace CursoWindowsForm
                     {
                         MessageBox.Show("Ok: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+                    else
+                    {
+                        MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
@@ -141,7 +145,7 @@ namespace CursoWindowsForm
                 Fichario f = new Fichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
                 if (f.status)
                 {
-                    string clienteJson = f.Buscar(txt_codigoCliente.Text);
+                    string clienteJson = f.BuscarCliente(txt_codigoCliente.Text);
                     Cliente.Unit C = new Cliente.Unit();
                     C = Cliente.DesSerializedClassUnit(clienteJson);
 
@@ -161,7 +165,30 @@ namespace CursoWindowsForm
 
         private void ApagaToolStripButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Efetuei um clique sobre o botão APAGAR");
+            if (txt_codigoCliente.Text == "")
+            {
+                MessageBox.Show("Código do cliente vazio", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Fichario f = new Fichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
+                if (f.status)
+                {
+                    f.ExcluirCliente(txt_codigoCliente.Text);
+                    if (f.status)
+                    {
+                        MessageBox.Show("Ok: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void LimparToolStripButton_Click(object sender, EventArgs e)
