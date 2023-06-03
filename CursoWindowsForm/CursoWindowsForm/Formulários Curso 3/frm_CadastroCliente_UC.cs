@@ -174,14 +174,26 @@ namespace CursoWindowsForm
                 Fichario f = new Fichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
                 if (f.status)
                 {
-                    f.ExcluirCliente(txt_codigoCliente.Text);
-                    if (f.status)
+                    string clienteJson = f.BuscarCliente(txt_codigoCliente.Text);
+                    Cliente.Unit C = new Cliente.Unit();
+                    C = Cliente.DesSerializedClassUnit(clienteJson);
+
+                    EscreveFormulario(C);
+
+                    frm_Questao Db = new frm_Questao("icons8-question-mark-961", "Deseja excluir o cliente???");
+                    Db.ShowDialog();
+                    if (Db.DialogResult == DialogResult.Yes)
                     {
-                        MessageBox.Show("Ok: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        f.ExcluirCliente(txt_codigoCliente.Text);
+                        if (f.status)
+                        {
+                            MessageBox.Show("Ok: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LimparFormulario();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
                 else
