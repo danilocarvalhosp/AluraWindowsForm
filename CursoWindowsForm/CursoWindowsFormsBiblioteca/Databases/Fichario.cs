@@ -58,5 +58,33 @@ namespace CursoWindowsFormsBiblioteca.Databases
                 mensagem = "Inclusão efetuada com erro: " + ex.Message;
             }
         }
+
+        public string Buscar(string id)
+        {
+            status = true;
+
+            try
+            {
+                if (!File.Exists(diretorio + "\\" + id + ".json"))
+                {
+                    status = false;
+                    mensagem = "Identificador não existe: " + id;
+                }
+                else
+                {
+                    string conteudo = File.ReadAllText(diretorio + "\\" + id + ".json");
+                    status = true;
+                    mensagem = "Inclusão efetuada com sucesso. Identificador: " + id;
+                    return conteudo;
+                }
+            }
+            catch (Exception ex)
+            {
+                status = false;
+                mensagem = "Erro ao buscar o conteúdo do identificador: " + ex.Message;
+            }
+
+            return "";
+        }
     }
 }

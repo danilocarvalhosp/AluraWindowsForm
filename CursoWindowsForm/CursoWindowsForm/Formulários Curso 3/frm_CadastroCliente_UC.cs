@@ -132,7 +132,23 @@ namespace CursoWindowsForm
 
         private void abrirToolStripButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Efetuei um clique sobre o botão ABRIR");
+            if (txt_codigoCliente.Text == "")
+            {
+                MessageBox.Show("Código do cliente vazio", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Fichario f = new Fichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
+                if (f.status)
+                {
+                    string clienteJson = f.Buscar(txt_codigoCliente.Text);
+                    MessageBox.Show(clienteJson);
+                }
+                else
+                {
+                    MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void salvarToolStripButton_Click(object sender, EventArgs e)
