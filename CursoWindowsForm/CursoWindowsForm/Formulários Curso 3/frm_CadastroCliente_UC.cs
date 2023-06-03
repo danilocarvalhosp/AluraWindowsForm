@@ -102,7 +102,9 @@ namespace CursoWindowsForm
                 C.ValidaClasse();
                 C.ValidaComplemento();
 
-                MessageBox.Show("Classe foi inicializada sem erros", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string clienteJson = Cliente.SerializedClassUnit(C);
+
+                MessageBox.Show("Cliente irá ser incluído. O conteúdo será: " + clienteJson, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (ValidationException ex)
             {
