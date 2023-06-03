@@ -108,11 +108,15 @@ namespace CursoWindowsForm
                 Fichario f = new Fichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
                 if (f.status)
                 {
-                    MessageBox.Show("Ok: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    f.IncluirCliente(C.Id, clienteJson);
+                    if (f.status)
+                    {
+                        MessageBox.Show("Ok: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
