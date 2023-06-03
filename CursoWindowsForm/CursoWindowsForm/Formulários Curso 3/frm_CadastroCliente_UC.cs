@@ -142,7 +142,10 @@ namespace CursoWindowsForm
                 if (f.status)
                 {
                     string clienteJson = f.Buscar(txt_codigoCliente.Text);
-                    MessageBox.Show(clienteJson);
+                    Cliente.Unit C = new Cliente.Unit();
+                    C = Cliente.DesSerializedClassUnit(clienteJson);
+
+                    EscreveFormulario(C);
                 }
                 else
                 {
@@ -231,6 +234,65 @@ namespace CursoWindowsForm
 
             return C;
         }
+
+        void EscreveFormulario(Cliente.Unit C)
+        {
+            txt_codigoCliente.Text = C.Id;
+            txt_nomeCliente.Text = C.Nome;
+            txt_nomeMae.Text = C.NomeMae;
+
+            if (C.NaoTemPai == true)
+            {
+                chk_TemPai.Checked = true;
+                txt_nomePai.Text = "";
+
+            }
+            else
+            {
+                chk_TemPai.Checked = false;
+                txt_nomePai.Text = C.NomePai;
+            }
+
+            if (C.Genero == 0)
+            {
+                rdb_Masculino.Checked = true;
+            }
+            else if (C.Genero == 1)
+            {
+                rdb_Feminino.Checked = true;
+            }
+            else
+            {
+                rdb_Indefinido.Checked = true;
+            }
+
+            txt_CPF.Text = C.Cpf;
+            txt_CEP.Text = C.Cep;
+            txt_logradouro.Text = C.Logradouro;
+            txt_complemento.Text = C.Complemento;
+            txt_bairro.Text = C.Bairro;
+            txt_Cidade.Text = C.Cidade;
+
+            if (C.Estado == "")
+            {
+                cmb_Estados.SelectedIndex = -1;
+            }
+            else
+            {
+                for (int i = 0; i < cmb_Estados.Items.Count - 1; i++)
+                {
+                    if (C.Estado == cmb_Estados.Items [i].ToString())
+                    {
+                        cmb_Estados.SelectedIndex = i;
+                    }
+                }
+            }
+
+            txt_telefone.Text = C.Telefone;
+            txt_profissao.Text = C.Profissao;
+            txt_rendaFamiliar.Text = C.RendaFamiliar.ToString();
+        }
+
 
         private void txt_CEP_Leave(object sender, EventArgs e)
         {
