@@ -40,6 +40,9 @@
     <Compile Update="Formulários Curso 3\frm_MouseEventos.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Frm_Busca.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frm_Principal.cs">
       <SubType>Form</SubType>
     </Compile>

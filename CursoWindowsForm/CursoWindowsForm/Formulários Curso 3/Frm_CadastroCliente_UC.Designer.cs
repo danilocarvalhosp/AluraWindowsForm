@@ -49,6 +49,7 @@
             lbl_rendaFamiliar = new Label();
             txt_codigoCliente = new TextBox();
             grp_codigo = new GroupBox();
+            btn_busca = new Button();
             grp_dadosPessoais = new GroupBox();
             grp_Genero = new GroupBox();
             rdb_Indefinido = new RadioButton();
@@ -235,20 +236,31 @@
             // 
             // txt_codigoCliente
             // 
-            txt_codigoCliente.Location = new Point(6, 22);
+            txt_codigoCliente.Location = new Point(6, 19);
             txt_codigoCliente.Name = "txt_codigoCliente";
             txt_codigoCliente.Size = new Size(178, 23);
             txt_codigoCliente.TabIndex = 1;
             // 
             // grp_codigo
             // 
+            grp_codigo.Controls.Add(btn_busca);
             grp_codigo.Controls.Add(txt_codigoCliente);
             grp_codigo.Location = new Point(12, 56);
             grp_codigo.Name = "grp_codigo";
-            grp_codigo.Size = new Size(194, 52);
+            grp_codigo.Size = new Size(319, 52);
             grp_codigo.TabIndex = 28;
             grp_codigo.TabStop = false;
             grp_codigo.Text = "groupBox1";
+            // 
+            // btn_busca
+            // 
+            btn_busca.Location = new Point(190, 17);
+            btn_busca.Name = "btn_busca";
+            btn_busca.Size = new Size(123, 25);
+            btn_busca.TabIndex = 2;
+            btn_busca.Text = "button1";
+            btn_busca.UseVisualStyleBackColor = true;
+            btn_busca.Click += btn_busca_Click;
             // 
             // grp_dadosPessoais
             // 
@@ -578,5 +590,6 @@
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton ApagaToolStripButton;
         private ToolStripButton LimparToolStripButton;
+        private Button btn_busca;
     }
 }
