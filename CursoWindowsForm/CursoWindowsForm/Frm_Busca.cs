@@ -26,6 +26,7 @@ namespace CursoWindowsForm
             Tls_Principal.Items [0].ToolTipText = "Salvar a seleção";
             Tls_Principal.Items [1].ToolTipText = "Fechar a tela";
             PreencherLista();
+            lista_Busca.Sorted = true;
         }
 
         private void ApagaToolStripButton_Click(object sender, EventArgs e)
@@ -40,15 +41,33 @@ namespace CursoWindowsForm
 
             for (int i = 0; i <= _ListaBusca.Count - 1; i++)
             {
-                lista_Busca.Items.Add(_ListaBusca [i] [1]);
+                ItemBox x = new ItemBox();
+                x.id = _ListaBusca [i] [0];
+                x.nome = _ListaBusca [i] [1];
+
+                lista_Busca.Items.Add(x);
             }
         }
 
         private void salvarToolStripButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
-            idSelected = _ListaBusca [lista_Busca.SelectedIndex] [0];
-            this.Close ();
+
+            ItemBox itemSelecionado = (ItemBox) lista_Busca.Items [lista_Busca.SelectedIndex];
+            idSelected = itemSelecionado.id;
+
+            this.Close();
+        }
+
+        class ItemBox
+        {
+            public string? id { get; set; }
+            public string? nome { get; set; }
+
+            public override string ToString()
+            {
+                return nome;
+            }
         }
     }
 }
