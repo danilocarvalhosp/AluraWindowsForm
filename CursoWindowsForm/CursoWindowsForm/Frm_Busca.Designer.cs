@@ -32,7 +32,7 @@
             Tls_Principal = new ToolStrip();
             salvarToolStripButton = new ToolStripButton();
             ApagaToolStripButton = new ToolStripButton();
-            listBox1 = new ListBox();
+            lista_Busca = new ListBox();
             Tls_Principal.SuspendLayout();
             SuspendLayout();
             // 
@@ -53,6 +53,7 @@
             salvarToolStripButton.Name = "salvarToolStripButton";
             salvarToolStripButton.Size = new Size(23, 22);
             salvarToolStripButton.Text = "&Salvar";
+            salvarToolStripButton.Click += salvarToolStripButton_Click;
             // 
             // ApagaToolStripButton
             // 
@@ -64,21 +65,21 @@
             ApagaToolStripButton.Text = "toolStripButton1";
             ApagaToolStripButton.Click += ApagaToolStripButton_Click;
             // 
-            // listBox1
+            // lista_Busca
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(12, 37);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(321, 259);
-            listBox1.TabIndex = 34;
+            lista_Busca.FormattingEnabled = true;
+            lista_Busca.ItemHeight = 15;
+            lista_Busca.Location = new Point(12, 37);
+            lista_Busca.Name = "lista_Busca";
+            lista_Busca.Size = new Size(321, 259);
+            lista_Busca.TabIndex = 34;
             // 
             // Frm_Busca
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(345, 320);
-            Controls.Add(listBox1);
+            Controls.Add(lista_Busca);
             Controls.Add(Tls_Principal);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon) resources.GetObject("$this.Icon");
@@ -97,6 +98,6 @@
         private ToolStrip Tls_Principal;
         private ToolStripButton salvarToolStripButton;
         private ToolStripButton ApagaToolStripButton;
-        private ListBox listBox1;
+        private ListBox lista_Busca;
     }
 }

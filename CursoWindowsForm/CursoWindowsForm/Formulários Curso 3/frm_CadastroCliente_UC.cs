@@ -428,6 +428,16 @@ namespace CursoWindowsForm
 
                     Frm_Busca frm = new Frm_Busca(ListaBusca);
                     frm.ShowDialog();
+
+                    if (frm.DialogResult == DialogResult.OK)
+                    {
+                        var idSelect = frm.idSelected;
+
+                        string clienteJson = f.BuscarCliente(idSelect);
+                        Cliente.Unit C = new Cliente.Unit();
+                        C = Cliente.DesSerializedClassUnit(clienteJson);
+                        EscreveFormulario(C);
+                    }
                 }
                 else
                 {
