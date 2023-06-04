@@ -416,16 +416,28 @@ namespace CursoWindowsForm
                 List<string> list = new List<string>();
                 list = f.BuscarTodos();
 
-                Frm_Busca frm = new Frm_Busca();
-                frm.ShowDialog();
+                if (f.status)
+                {
+                    List<List<string>> ListaBusca = new List<List<string>>();
+
+                    for (int i = 0; i <= list.Count - 1; i++)
+                    {
+                        Cliente.Unit C = Cliente.DesSerializedClassUnit(list [i]);
+                        ListaBusca.Add(new List<string> { C.Id, C.Nome });
+                    }
+
+                    Frm_Busca frm = new Frm_Busca(ListaBusca);
+                    frm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
                 MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            Frm_Busca F = new Frm_Busca();
-            F.ShowDialog();
         }
     }
 }

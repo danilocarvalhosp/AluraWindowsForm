@@ -12,7 +12,7 @@ namespace CursoWindowsForm
 {
     public partial class Frm_Busca : Form
     {
-        public Frm_Busca()
+        public Frm_Busca(List<List<string>> ListaBusca)
         {
             InitializeComponent();
             this.Text = "Busca";
