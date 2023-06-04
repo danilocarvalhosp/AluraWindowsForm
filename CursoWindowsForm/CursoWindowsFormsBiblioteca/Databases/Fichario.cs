@@ -87,6 +87,31 @@ namespace CursoWindowsFormsBiblioteca.Databases
             return "";
         }
 
+        public List<string> BuscarTodos()
+        {
+            status = true;
+            List<string> list = new List<string>();
+
+            try
+            {
+                var arquivos = Directory.GetFiles(diretorio, "*.json");
+                for (int i = 0; i < arquivos.Length - 1; i++)
+                {
+                    string conteudo = File.ReadAllText(arquivos [i]);
+                    list.Add(conteudo);
+                }
+
+                return list;
+            }
+            catch (Exception ex)
+            {
+                status = false;
+                mensagem = "Erro ao buscar o conteúdo do identificador: " + ex.Message;
+            }
+
+            return list;
+        }
+
         public void ExcluirCliente(string id)
         {
             status = true;

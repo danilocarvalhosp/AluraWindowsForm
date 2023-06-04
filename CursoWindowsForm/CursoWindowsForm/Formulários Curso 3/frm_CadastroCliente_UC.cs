@@ -410,6 +410,20 @@ namespace CursoWindowsForm
 
         private void btn_busca_Click(object sender, EventArgs e)
         {
+            Fichario f = new Fichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
+            if (f.status)
+            {
+                List<string> list = new List<string>();
+                list = f.BuscarTodos();
+
+                Frm_Busca frm = new Frm_Busca();
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             Frm_Busca F = new Frm_Busca();
             F.ShowDialog();
         }
