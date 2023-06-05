@@ -188,6 +188,20 @@ namespace CursoWindowsFormsBiblioteca.Classes
                 }
             }
 
+            public List<string> ListaFichario(string conexao)
+            {
+                Fichario f = new Fichario(conexao);
+                if (f.status)
+                {
+                    List<string> todosJson = f.BuscarTodos();
+                    return todosJson;
+                }
+                else
+                {
+                    throw new Exception(f.mensagem);
+                }
+            }
+
             #endregion
         }
 
