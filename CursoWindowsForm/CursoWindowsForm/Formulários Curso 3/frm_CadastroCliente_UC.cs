@@ -149,7 +149,14 @@ namespace CursoWindowsForm
                 {
                     Cliente.Unit C = new Cliente.Unit();
                     C = C.BuscarFichario(txt_codigoCliente.Text, "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
-                    EscreveFormulario(C);
+                    if (C == null)
+                    {
+                        MessageBox.Show("Identificador não encontrado", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        EscreveFormulario(C);
+                    }
 
                     //Fichario f = new Fichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
                     //if (f.status)
@@ -229,17 +236,31 @@ namespace CursoWindowsForm
             }
             else
             {
-                Cliente.Unit C = new Cliente.Unit();
-                C = C.BuscarFichario(txt_codigoCliente.Text, "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
-                EscreveFormulario(C);
-
-                frm_Questao Db = new frm_Questao("icons8-question-mark-961", "Deseja excluir o cliente???");
-                Db.ShowDialog();
-                if (Db.DialogResult == DialogResult.Yes)
+                try
                 {
-                    C.ApagarFichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
-                    MessageBox.Show("Ok: Identificador apagado com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LimparFormulario();
+                    Cliente.Unit C = new Cliente.Unit();
+                    C = C.BuscarFichario(txt_codigoCliente.Text, "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
+
+                    if (C == null)
+                    {
+                        MessageBox.Show("Identificador não encontrado", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        EscreveFormulario(C);
+                        frm_Questao Db = new frm_Questao("icons8-question-mark-961", "Deseja excluir o cliente???");
+                        Db.ShowDialog();
+                        if (Db.DialogResult == DialogResult.Yes)
+                        {
+                            C.ApagarFichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
+                            MessageBox.Show("Ok: Identificador apagado com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LimparFormulario();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
 
