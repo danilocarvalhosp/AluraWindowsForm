@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
+using System.Security.Cryptography.X509Certificates;
+using CursoWindowsFormsBiblioteca.Databases;
 
 namespace CursoWindowsFormsBiblioteca.Classes
 {
@@ -109,6 +111,31 @@ namespace CursoWindowsFormsBiblioteca.Classes
                     throw new Exception("CPF inválido");
                 }
             }
+
+            #region "CRUD do Fichário"
+
+            public void IncluirFichario(string conexao)
+            {
+                string clienteJson = Cliente.SerializedClassUnit(this);
+
+                Fichario f = new Fichario(conexao);
+                if (f.status)
+                {
+                    f.IncluirCliente(this.Id, clienteJson);
+
+                    if (!f.status)
+                    {
+                        throw new Exception(f.mensagem);
+                    }
+                }
+                else
+                {
+                    throw new Exception(f.mensagem);
+                }
+
+            }
+
+            #endregion
         }
 
         public class List

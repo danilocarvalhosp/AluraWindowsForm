@@ -15,7 +15,7 @@ namespace CursoWindowsForm
     {
         List<List<string>> _ListaBusca = new List<List<string>>();
 
-        public string idSelected { get; set; }
+        public string? idSelected { get; set; }
 
         public Frm_Busca(List<List<string>> ListaBusca)
         {
