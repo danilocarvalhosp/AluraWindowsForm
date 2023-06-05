@@ -15,9 +15,31 @@ namespace CursoWindowsFormsBiblioteca.Databases
 
         public LocalDBClass()
         {
-            stringConn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\CursoWindowsFormsBiblioteca\\Databases\\Fichario.mdf\";Integrated Security=True";
-            connDB = new SqlConnection(stringConn);
-            connDB.Open();
+            try
+            {
+                stringConn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\CursoWindowsFormsBiblioteca\\Databases\\Fichario.mdf\";Integrated Security=True";
+                connDB = new SqlConnection(stringConn);
+                connDB.Open();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public string SqlCommand (string sql)
+        {
+            try
+            {
+                var myCommand = new SqlCommand(sql, connDB);
+                myCommand.CommandTimeout = 0;
+                var myReader = myCommand.ExecuteReader();
+                return "";
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }
