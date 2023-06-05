@@ -145,18 +145,29 @@ namespace CursoWindowsForm
             }
             else
             {
-                Fichario f = new Fichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
-                if (f.status)
+                try
                 {
-                    string clienteJson = f.BuscarCliente(txt_codigoCliente.Text);
                     Cliente.Unit C = new Cliente.Unit();
-                    C = Cliente.DesSerializedClassUnit(clienteJson);
-
+                    C = C.BuscarFichario(txt_codigoCliente.Text, "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
                     EscreveFormulario(C);
+
+                    //Fichario f = new Fichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
+                    //if (f.status)
+                    //{
+                    //    string clienteJson = f.BuscarCliente(txt_codigoCliente.Text);
+                    //    Cliente.Unit C = new Cliente.Unit();
+                    //    C = Cliente.DesSerializedClassUnit(clienteJson);
+
+                    //    EscreveFormulario(C);
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //}
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

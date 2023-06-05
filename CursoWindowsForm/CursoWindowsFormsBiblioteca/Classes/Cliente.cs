@@ -132,6 +132,21 @@ namespace CursoWindowsFormsBiblioteca.Classes
                 {
                     throw new Exception(f.mensagem);
                 }
+            }
+
+            public Unit BuscarFichario(string id, string conexao)
+            {
+                Fichario f = new Fichario(conexao);
+
+                if (f.status)
+                {
+                    string clienteJson = f.BuscarCliente(id);
+                    return Cliente.DesSerializedClassUnit(clienteJson);
+                }
+                else
+                {
+                    throw new Exception(f.mensagem);
+                }
 
             }
 
