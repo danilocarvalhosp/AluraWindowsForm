@@ -150,12 +150,31 @@ namespace CursoWindowsFormsBiblioteca.Classes
 
             }
 
+            public void AlterarFichario(string conexao)
+            {
+                Fichario f = new Fichario(conexao);
+                if (f.status)
+                {
+                    string clienteJson = Cliente.SerializedClassUnit(this);
+
+                    f.AlterarCliente(this.Id, clienteJson);
+                    if (!f.status)
+                    {
+                        throw new Exception(f.mensagem);
+                    }
+                }
+                else
+                {
+                    throw new Exception(f.mensagem);
+                }
+            }
+
             #endregion
         }
 
         public class List
         {
-            public List<Unit>? ListUnit {get; set;}
+            public List<Unit>? ListUnit { get; set; }
         }
 
         public static Unit DesSerializedClassUnit(string vJson)

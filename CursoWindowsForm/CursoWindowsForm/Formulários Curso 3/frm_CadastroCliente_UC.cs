@@ -187,26 +187,28 @@ namespace CursoWindowsForm
                     C.Id = txt_codigoCliente.Text;
                     C.ValidaClasse();
                     C.ValidaComplemento();
+                    C.AlterarFichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
+                    MessageBox.Show("Ok: Identificador incluído com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    string clienteJson = Cliente.SerializedClassUnit(C);
+                    //string clienteJson = Cliente.SerializedClassUnit(C);
 
-                    Fichario f = new Fichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
-                    if (f.status)
-                    {
-                        f.AlterarCliente(C.Id, clienteJson);
-                        if (f.status)
-                        {
-                            MessageBox.Show("Ok: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    //Fichario f = new Fichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
+                    //if (f.status)
+                    //{
+                    //    f.AlterarCliente(C.Id, clienteJson);
+                    //    if (f.status)
+                    //    {
+                    //        MessageBox.Show("Ok: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //    }
+                    //    else
+                    //    {
+                    //        MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //}
                 }
                 catch (ValidationException ex)
                 {
