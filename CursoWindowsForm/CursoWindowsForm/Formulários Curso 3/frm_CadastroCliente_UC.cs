@@ -188,7 +188,7 @@ namespace CursoWindowsForm
                     C.ValidaClasse();
                     C.ValidaComplemento();
                     C.AlterarFichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
-                    MessageBox.Show("Ok: Identificador incluído com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Ok: Identificador alterado com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     //string clienteJson = Cliente.SerializedClassUnit(C);
 
@@ -229,35 +229,49 @@ namespace CursoWindowsForm
             }
             else
             {
-                Fichario f = new Fichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
-                if (f.status)
-                {
-                    string clienteJson = f.BuscarCliente(txt_codigoCliente.Text);
-                    Cliente.Unit C = new Cliente.Unit();
-                    C = Cliente.DesSerializedClassUnit(clienteJson);
+                Cliente.Unit C = new Cliente.Unit();
+                C = C.BuscarFichario(txt_codigoCliente.Text, "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
+                EscreveFormulario(C);
 
-                    EscreveFormulario(C);
-
-                    frm_Questao Db = new frm_Questao("icons8-question-mark-961", "Deseja excluir o cliente???");
-                    Db.ShowDialog();
-                    if (Db.DialogResult == DialogResult.Yes)
-                    {
-                        f.ExcluirCliente(txt_codigoCliente.Text);
-                        if (f.status)
-                        {
-                            MessageBox.Show("Ok: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            LimparFormulario();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                else
+                frm_Questao Db = new frm_Questao("icons8-question-mark-961", "Deseja excluir o cliente???");
+                Db.ShowDialog();
+                if (Db.DialogResult == DialogResult.Yes)
                 {
-                    MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    C.ApagarFichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
+                    MessageBox.Show("Ok: Identificador apagado com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimparFormulario();
                 }
+
+
+                //Fichario f = new Fichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsForm\\Fichario");
+                //if (f.status)
+                //{
+                //    string clienteJson = f.BuscarCliente(txt_codigoCliente.Text);
+                //    Cliente.Unit C = new Cliente.Unit();
+                //    C = Cliente.DesSerializedClassUnit(clienteJson);
+
+                //    EscreveFormulario(C);
+
+                //    frm_Questao Db = new frm_Questao("icons8-question-mark-961", "Deseja excluir o cliente???");
+                //    Db.ShowDialog();
+                //    if (Db.DialogResult == DialogResult.Yes)
+                //    {
+                //        f.ExcluirCliente(txt_codigoCliente.Text);
+                //        if (f.status)
+                //        {
+                //            MessageBox.Show("Ok: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //            LimparFormulario();
+                //        }
+                //        else
+                //        {
+                //            MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //        }
+                //    }
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Erro: " + f.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
             }
         }
 

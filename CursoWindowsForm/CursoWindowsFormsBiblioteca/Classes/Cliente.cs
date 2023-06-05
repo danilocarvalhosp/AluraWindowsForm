@@ -169,6 +169,25 @@ namespace CursoWindowsFormsBiblioteca.Classes
                 }
             }
 
+            public void ApagarFichario(string conexao)
+            {
+                Fichario f = new Fichario(conexao);
+                if (f.status)
+                {
+                    string clienteJson = Cliente.SerializedClassUnit(this);
+
+                    f.ExcluirCliente(this.Id);
+                    if (!f.status)
+                    {
+                        throw new Exception(f.mensagem);
+                    }
+                }
+                else
+                {
+                    throw new Exception(f.mensagem);
+                }
+            }
+
             #endregion
         }
 
