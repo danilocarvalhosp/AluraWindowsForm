@@ -154,7 +154,6 @@ namespace CursoWindowsFormsBiblioteca.Databases
             {
                 db.Close();
             }
-
         }
 
         public void Alterar(string Id, string jsonUnit)
@@ -188,8 +187,6 @@ namespace CursoWindowsFormsBiblioteca.Databases
             {
                 db.Close();
             }
-
         }
-
     }
 }

@@ -81,7 +81,6 @@ namespace CursoWindowsForms
             Btn_Busca.Text = "Buscar";
 
             LimparFormulario();
-
         }
 
         private void LimparFormulario()
@@ -102,7 +101,6 @@ namespace CursoWindowsForms
             Txt_Cidade.Text = "";
             Chk_TemPai.Checked = false;
             Rdb_Masculino.Checked = true;
-
         }
 
         private void Chk_TemPai_CheckedChanged(object sender, EventArgs e)
@@ -119,7 +117,6 @@ namespace CursoWindowsForms
 
         private void novoToolStripButton_Click(object sender, EventArgs e)
         {
-
             try
             {
 
@@ -128,30 +125,8 @@ namespace CursoWindowsForms
                 C.ValidaClasse();
                 C.ValidaComplemento();
 
-                //C.IncluirFichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
-
                 C.IncluirFicharioDB("Cliente");
                 MessageBox.Show("OK: Identificador incluido com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                //string clienteJson = Cliente.SerializedClassUnit(C);
-                //Fichario F = new Fichario("C:\\WindowsForms\\Curso\\CursoWindowsForms\\Fichario");
-                //if (F.status)
-                //{
-                //    F.Incluir(C.Id, clienteJson);
-                //    if (F.status)
-                //    {
-                //        MessageBox.Show("OK: " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //    }
-                //    else
-                //    {
-                //        MessageBox.Show("ERR: " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    }
-                //}
-                //else
-                //{
-                //    MessageBox.Show("ERR: " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
-
             }
             catch (ValidationException Ex)
             {
@@ -175,8 +150,6 @@ namespace CursoWindowsForms
                 {
                     Cliente.Unit C = new Cliente.Unit();
 
-                    //C = C.BuscarFichario(Txt_Codigo.Text, "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
-
                     C = C.BuscarFicharioDB(Txt_Codigo.Text, "Cliente");
                     if (C == null)
                     {
@@ -186,26 +159,11 @@ namespace CursoWindowsForms
                     {
                         EscreveFormulario(C);
                     }
-                  
-
-                    //Fichario F = new Fichario("C:\\WindowsForms\\Curso\\CursoWindowsForms\\Fichario");
-                    //if (F.status)
-                    //{
-                    //    string clienteJson = F.Buscar(Txt_Codigo.Text);
-                    //    Cliente.Unit C = new Cliente.Unit();
-                    //    C = Cliente.DesSerializedClassUnit(clienteJson);
-                    //    EscreveFormulario(C);
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("ERR: " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //}
                 }
                 catch (Exception Ex)
                 {
                     MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-               
+                }               
             }
         }
 
@@ -224,30 +182,8 @@ namespace CursoWindowsForms
                     C.ValidaClasse();
                     C.ValidaComplemento();
 
-                    //C.AlterarFichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
-
                     C.AlterarFicharioDB("Cliente");
                     MessageBox.Show("OK: Indentificador alterado com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    //string clienteJson = Cliente.SerializedClassUnit(C);
-                    //Fichario F = new Fichario("C:\\WindowsForms\\Curso\\CursoWindowsForms\\Fichario");
-                    //if (F.status)
-                    //{
-                    //    F.Alterar(C.Id, clienteJson);
-                    //    if (F.status)
-                    //    {
-                    //        MessageBox.Show("OK: " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //    }
-                    //    else
-                    //    {
-                    //        MessageBox.Show("ERR: " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("ERR: " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //}
-
                 }
                 catch (ValidationException Ex)
                 {
@@ -258,7 +194,6 @@ namespace CursoWindowsForms
                     MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
         }
 
         private void ApagatoolStripButton_Click(object sender, EventArgs e)
@@ -272,8 +207,6 @@ namespace CursoWindowsForms
                 try
                 {
                     Cliente.Unit C = new Cliente.Unit();
-
-                    //C = C.BuscarFichario(Txt_Codigo.Text, "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");   
                     
                     C = C.BuscarFicharioDB(Txt_Codigo.Text, "Cliente");              
                     if (C == null)
@@ -287,8 +220,6 @@ namespace CursoWindowsForms
                         Db.ShowDialog();
                         if (Db.DialogResult == DialogResult.Yes)
                         {
-                            //C.ApagarFichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
-
                             C.ApagarFicharioDB("Cliente");
                             MessageBox.Show("OK: Indentificador apagado com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             LimparFormulario();
@@ -299,38 +230,6 @@ namespace CursoWindowsForms
                 {
                     MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-
-               
-         
-                //Fichario F = new Fichario("C:\\WindowsForms\\Curso\\CursoWindowsForms\\Fichario");
-                //if (F.status)
-                //{
-                //    string clienteJson = F.Buscar(Txt_Codigo.Text);
-                //    Cliente.Unit C = new Cliente.Unit();
-                //    C = Cliente.DesSerializedClassUnit(clienteJson);
-                //    EscreveFormulario(C);
-
-                //    Frm_Questao Db = new Frm_Questao("icons8_question_mark_961", "Você quer excluir o cliente?");
-                //    Db.ShowDialog();
-                //    if (Db.DialogResult == DialogResult.Yes)
-                //    {
-                //        F.Apagar(Txt_Codigo.Text);
-                //        if (F.status)
-                //        {
-                //            MessageBox.Show("OK: " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //            LimparFormulario();
-                //        }
-                //        else
-                //        {
-                //            MessageBox.Show("ERR: " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //        }
-                //    }                   
-                //}
-                //else
-                //{
-                //    MessageBox.Show("ERR: " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
             }
         }
 
@@ -496,16 +395,12 @@ namespace CursoWindowsForms
             {
                 Cliente.Unit C = new Cliente.Unit();
 
-                //var ListaBusca = C.BuscarFicharioTodos("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
-
                 var ListaBusca = C.BuscarFicharioDBTodos("Cliente");
                 Frm_Busca FForm = new Frm_Busca(ListaBusca);
                 FForm.ShowDialog();
                 if (FForm.DialogResult == DialogResult.OK)
                 {
                     var idSelect = FForm.idSelect;
-
-                    //C = C.BuscarFichario(idSelect, "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
 
                     C = C.BuscarFicharioDB(idSelect, "Cliente");
                     if (C == null)
@@ -522,41 +417,6 @@ namespace CursoWindowsForms
             {
                 MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            //Fichario F = new Fichario("C:\\WindowsForms\\Curso\\CursoWindowsForms\\Fichario");
-            //if (F.status)
-            //{
-            //    List<string> List = new List<string>();
-            //    List = F.BuscarTodos();
-            //    if (F.status)
-            //    {
-            //        List<List<string>> ListaBusca = new List<List<string>> ();
-            //        for (int i = 0; i <= List.Count - 1; i++)
-            //        {
-            //            Cliente.Unit C = Cliente.DesSerializedClassUnit(List[i]);
-            //            ListaBusca.Add(new List<string> { C.Id, C.Nome });
-            //        }
-            //        Frm_Busca FForm = new Frm_Busca(ListaBusca);
-            //        FForm.ShowDialog();
-            //        if (FForm.DialogResult == DialogResult.OK)
-            //        {
-            //            var idSelect = FForm.idSelect;
-            //            string clienteJson = F.Buscar(idSelect);
-            //            Cliente.Unit C = new Cliente.Unit();
-            //            C = Cliente.DesSerializedClassUnit(clienteJson);
-            //            EscreveFormulario(C);
-            //        }
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("ERR " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }                 
-            //}
-            //else
-            //{
-            //    MessageBox.Show("ERR: " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-
         }
     }
 }
