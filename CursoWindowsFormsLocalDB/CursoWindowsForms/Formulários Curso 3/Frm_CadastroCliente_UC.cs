@@ -125,7 +125,7 @@ namespace CursoWindowsForms
                 C.ValidaClasse();
                 C.ValidaComplemento();
 
-                C.IncluirFicharioDB("Cliente");
+                C.IncluirFicharioSQL("Cliente");
                 MessageBox.Show("OK: Identificador incluido com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (ValidationException Ex)
@@ -150,7 +150,7 @@ namespace CursoWindowsForms
                 {
                     Cliente.Unit C = new Cliente.Unit();
 
-                    C = C.BuscarFicharioDB(Txt_Codigo.Text, "Cliente");
+                    C = C.BuscarFicharioSQL(Txt_Codigo.Text, "Cliente");
                     if (C == null)
                     {
                         MessageBox.Show("Identificador não encontrado.", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -182,7 +182,7 @@ namespace CursoWindowsForms
                     C.ValidaClasse();
                     C.ValidaComplemento();
 
-                    C.AlterarFicharioDB("Cliente");
+                    C.AlterarFicharioSQL("Cliente");
                     MessageBox.Show("OK: Indentificador alterado com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (ValidationException Ex)
@@ -208,7 +208,7 @@ namespace CursoWindowsForms
                 {
                     Cliente.Unit C = new Cliente.Unit();
                     
-                    C = C.BuscarFicharioDB(Txt_Codigo.Text, "Cliente");              
+                    C = C.BuscarFicharioSQL(Txt_Codigo.Text, "Cliente");              
                     if (C == null)
                     {
                         MessageBox.Show("Identificador não encontrado.", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -220,7 +220,7 @@ namespace CursoWindowsForms
                         Db.ShowDialog();
                         if (Db.DialogResult == DialogResult.Yes)
                         {
-                            C.ApagarFicharioDB("Cliente");
+                            C.ApagarFicharioSQL("Cliente");
                             MessageBox.Show("OK: Indentificador apagado com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             LimparFormulario();
                         }
@@ -395,14 +395,14 @@ namespace CursoWindowsForms
             {
                 Cliente.Unit C = new Cliente.Unit();
 
-                var ListaBusca = C.BuscarFicharioDBTodos("Cliente");
+                var ListaBusca = C.BuscarFicharioSQLTodos("Cliente");
                 Frm_Busca FForm = new Frm_Busca(ListaBusca);
                 FForm.ShowDialog();
                 if (FForm.DialogResult == DialogResult.OK)
                 {
                     var idSelect = FForm.idSelect;
 
-                    C = C.BuscarFicharioDB(idSelect, "Cliente");
+                    C = C.BuscarFicharioSQL(idSelect, "Cliente");
                     if (C == null)
                     {
                         MessageBox.Show("Identificador não encontrado.", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);

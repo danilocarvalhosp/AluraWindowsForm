@@ -27,3 +27,4 @@ E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsFormsLocalD
 E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsFormsLocalDB\CursoWindowsFormsBiblioteca\obj\Debug\CursoWindowsFormsBiblioteca.pdb
 E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsFormsLocalDB\CursoWindowsFormsBiblioteca\bin\Debug\Databases\Fichario.mdf
 E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsFormsLocalDB\CursoWindowsFormsBiblioteca\bin\Debug\Databases\Fichario_log.ldf
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsFormsLocalDB\CursoWindowsFormsBiblioteca\bin\Debug\CursoWindowsFormsBiblioteca.dll.config

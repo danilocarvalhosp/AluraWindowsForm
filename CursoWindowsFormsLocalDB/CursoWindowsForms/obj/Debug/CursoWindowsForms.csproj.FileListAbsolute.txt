@@ -118,3 +118,4 @@ E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsFormsLocalD
 E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsFormsLocalDB\CursoWindowsForms\obj\Debug\CursoWindowsForms.csproj.CopyComplete
 E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsFormsLocalDB\CursoWindowsForms\bin\Debug\Databases\Fichario.mdf
 E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsFormsLocalDB\CursoWindowsForms\bin\Debug\Databases\Fichario_log.ldf
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsFormsLocalDB\CursoWindowsForms\bin\Debug\CursoWindowsFormsBiblioteca.dll.config
