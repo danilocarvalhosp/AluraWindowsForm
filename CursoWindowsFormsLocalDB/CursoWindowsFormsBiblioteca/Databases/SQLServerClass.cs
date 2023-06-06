@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace CursoWindowsFormsBiblioteca.Databases
 {
@@ -17,7 +14,10 @@ namespace CursoWindowsFormsBiblioteca.Databases
         {
             try
             {
-                stringConn = "Data Source=DCSQL\\DANILO;Initial Catalog=ByteBank;Persist Security Info=True;User ID=sa;Password=Dan@8257";
+                // stringConn = "Data Source=DCSQL\\DANILO;Initial Catalog=ByteBank;Persist Security Info=True;User ID=sa;Password=Dan@8257";
+
+                stringConn = ConfigurationManager.ConnectionStrings ["Fichario"].ConnectionString;
+
                 connDB = new SqlConnection(stringConn);
                 connDB.Open();
             }
