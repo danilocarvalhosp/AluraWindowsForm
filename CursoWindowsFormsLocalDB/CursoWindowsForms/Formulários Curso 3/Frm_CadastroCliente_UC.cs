@@ -127,7 +127,10 @@ namespace CursoWindowsForms
                 C = LeituraFormulario();
                 C.ValidaClasse();
                 C.ValidaComplemento();
-                C.IncluirFichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
+
+                //C.IncluirFichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
+
+                C.IncluirFicharioDB("Cliente");
                 MessageBox.Show("OK: Indentificador incluido com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 //string clienteJson = Cliente.SerializedClassUnit(C);
@@ -171,7 +174,10 @@ namespace CursoWindowsForms
                 try
                 {
                     Cliente.Unit C = new Cliente.Unit();
-                    C = C.BuscarFichario(Txt_Codigo.Text, "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
+
+                    //C = C.BuscarFichario(Txt_Codigo.Text, "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
+
+                    C = C.BuscarFicharioDB(Txt_Codigo.Text, "Cliente");
                     if (C == null)
                     {
                         MessageBox.Show("Identificador não encontrado.", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -217,7 +223,10 @@ namespace CursoWindowsForms
                     C = LeituraFormulario();
                     C.ValidaClasse();
                     C.ValidaComplemento();
-                    C.AlterarFichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
+
+                    //C.AlterarFichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
+
+                    C.AlterarFicharioDB("Cliente");
                     MessageBox.Show("OK: Indentificador alterado com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     //string clienteJson = Cliente.SerializedClassUnit(C);
@@ -263,7 +272,10 @@ namespace CursoWindowsForms
                 try
                 {
                     Cliente.Unit C = new Cliente.Unit();
-                    C = C.BuscarFichario(Txt_Codigo.Text, "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");              
+
+                    //C = C.BuscarFichario(Txt_Codigo.Text, "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");   
+                    
+                    C = C.BuscarFicharioDB(Txt_Codigo.Text, "Cliente");              
                     if (C == null)
                     {
                         MessageBox.Show("Identificador não encontrado.", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -275,7 +287,9 @@ namespace CursoWindowsForms
                         Db.ShowDialog();
                         if (Db.DialogResult == DialogResult.Yes)
                         {
-                            C.ApagarFichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
+                            //C.ApagarFichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
+
+                            C.ApagarFicharioDB("Cliente");
                             MessageBox.Show("OK: Indentificador apagado com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             LimparFormulario();
                         }
@@ -481,13 +495,19 @@ namespace CursoWindowsForms
             try
             {
                 Cliente.Unit C = new Cliente.Unit();
-                var ListaBusca = C.BuscarFicharioTodos("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
+
+                //var ListaBusca = C.BuscarFicharioTodos("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
+
+                var ListaBusca = C.BuscarFicharioDBTodos("Cliente");
                 Frm_Busca FForm = new Frm_Busca(ListaBusca);
                 FForm.ShowDialog();
                 if (FForm.DialogResult == DialogResult.OK)
                 {
                     var idSelect = FForm.idSelect;
-                    C = C.BuscarFichario(idSelect, "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
+
+                    //C = C.BuscarFichario(idSelect, "E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
+
+                    C = C.BuscarFicharioDB(idSelect, "Cliente");
                     if (C == null)
                     {
                         MessageBox.Show("Identificador não encontrado.", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
