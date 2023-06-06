@@ -46,5 +46,34 @@ namespace CursoWindowsFormsBiblioteca.Databases
                 mensagem = "Conexão com o Fichario com erro: " + ex.Message;
             }
         }
+
+        public string Buscar(string Id)
+        {
+            status = true;
+            try
+            {
+                var SQL = $"SELECT * FROM {tabela} WHERE id = '{Id}'";
+                var dt = db.SqlQuery(SQL);
+
+                if (dt.Rows.Count > 0)
+                {
+                    string conteudo = dt.Rows [0]["JSON"].ToString();
+                    status = true;
+                    mensagem = "Inclusão efetuada com sucesso. Identificador: " + Id;
+                    return conteudo;
+                }
+                else
+                {
+                    status = false;
+                    mensagem = "Identificador não existente: " + Id;
+                }
+            }
+            catch (Exception ex)
+            {
+                status = false;
+                mensagem = "Erro ao buscar o conteúdo do identificador: " + ex.Message;
+            }
+            return "";
+        }
     }
 }
