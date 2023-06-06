@@ -29,5 +29,22 @@ namespace CursoWindowsFormsBiblioteca.Databases
                 mensagem = "Erro de conexão com a tabela: " + ex.Message;
             }
         }
+
+        public void Incluir(string Id, string jsonUnit)
+        {
+            status = true;
+            try
+            {
+                var SQL = $"INSERT INTO {tabela} (ID, JSON) VALUES ('{Id}', '{jsonUnit}')";
+                db.SqlCommand(SQL);
+                status = true;
+                mensagem = "Inclusão efetuada com sucesso. Identificador: " + Id;
+            }
+            catch (Exception ex)
+            {
+                status = false;
+                mensagem = "Conexão com o Fichario com erro: " + ex.Message;
+            }
+        }
     }
 }
