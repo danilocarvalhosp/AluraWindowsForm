@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,7 +58,7 @@ namespace CursoWindowsFormsBiblioteca.Databases
 
                 if (dt.Rows.Count > 0)
                 {
-                    string conteudo = dt.Rows [0]["JSON"].ToString();
+                    string conteudo = dt.Rows [0] ["JSON"].ToString();
                     status = true;
                     mensagem = "Inclusão efetuada com sucesso. Identificador: " + Id;
                     return conteudo;
@@ -74,6 +75,38 @@ namespace CursoWindowsFormsBiblioteca.Databases
                 mensagem = "Erro ao buscar o conteúdo do identificador: " + ex.Message;
             }
             return "";
+        }
+
+        public List<string> BuscarTodos()
+        {
+            status = true;
+            List<string> List = new List<string>();
+            try
+            {
+                var SQL = $"SELECT * FROM {tabela}";
+                var dt = db.SqlQuery(SQL);
+                if (dt.Rows.Count > 0)
+                {
+                    for (int i = 0; i <= dt.Rows.Count - 1; i++)
+                    {
+                        string conteudo = dt.Rows [i] ["JSON"].ToString();
+                        List.Add(conteudo);
+                    }
+
+                    return List;
+                }
+                else
+                {
+                    status = false;
+                    mensagem = "Não existem clientes na base de dados";
+                }
+            }
+            catch (Exception ex)
+            {
+                status = false;
+                mensagem = "Erro ao buscar o conteúdo do identificador: " + ex.Message;
+            }
+            return List;
         }
     }
 }
