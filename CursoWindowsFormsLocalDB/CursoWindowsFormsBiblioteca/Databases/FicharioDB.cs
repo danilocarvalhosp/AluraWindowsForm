@@ -137,5 +137,35 @@ namespace CursoWindowsFormsBiblioteca.Databases
                 mensagem = "Erro ao buscar o conteúdo do identificador: " + ex.Message;
             }
         }
+
+        public void Alterar(string Id, string jsonUnit)
+        {
+            status = true;
+            try
+            {
+                var SQL = $"SELECT * FROM {tabela} WHERE id = '{Id}'";
+                var dt = db.SqlQuery(SQL);
+
+                if (dt.Rows.Count > 0)
+                {
+                    SQL = $"UPDATE {tabela} SET '{jsonUnit}' WHERE id = '{Id}'";
+                    db.SqlCommand(SQL);
+
+                    status = true;
+                    mensagem = "Alteração efetuada com sucesso. Identificador: " + Id;
+                }
+                else
+                {
+                    status = false;
+                    mensagem = "Alteração não permitida porque o identificador não existe: " + Id;
+                }
+            }
+            catch (Exception ex)
+            {
+                status = false;
+                mensagem = "Conexão com o Fichario com erro: " + ex.Message;
+            }
+        }
+
     }
 }

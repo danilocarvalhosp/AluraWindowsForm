@@ -153,7 +153,6 @@ namespace CursoWindowsFormsBiblioteca.Databases
                 status = false;
                 mensagem = "Conexão com o Fichario com erro: " + ex.Message;
             }
-
         }
     }
 }
