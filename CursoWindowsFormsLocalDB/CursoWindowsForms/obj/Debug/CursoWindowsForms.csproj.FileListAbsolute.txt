@@ -116,3 +116,5 @@ E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsFormsLocalD
 E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsFormsLocalDB\CursoWindowsForms\obj\Debug\CursoWindowsForms.csproj.GenerateResource.cache
 E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsFormsLocalDB\CursoWindowsForms\obj\Debug\CursoWindowsForms.csproj.CoreCompileInputs.cache
 E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsFormsLocalDB\CursoWindowsForms\obj\Debug\CursoWindowsForms.csproj.CopyComplete
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsFormsLocalDB\CursoWindowsForms\bin\Debug\Databases\Fichario.mdf
+E:\Projetos\Curso C#\Alura\Windows Form\AluraWindowsForm\CursoWindowsFormsLocalDB\CursoWindowsForms\bin\Debug\Databases\Fichario_log.ldf

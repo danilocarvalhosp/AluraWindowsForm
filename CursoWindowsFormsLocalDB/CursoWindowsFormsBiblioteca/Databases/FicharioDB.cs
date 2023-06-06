@@ -46,6 +46,10 @@ namespace CursoWindowsFormsBiblioteca.Databases
                 status = false;
                 mensagem = "Conexão com o Fichario com erro: " + ex.Message;
             }
+            finally
+            {
+                db.Close();
+            }
         }
 
         public string Buscar(string Id)
@@ -74,6 +78,11 @@ namespace CursoWindowsFormsBiblioteca.Databases
                 status = false;
                 mensagem = "Erro ao buscar o conteúdo do identificador: " + ex.Message;
             }
+            finally
+            {
+                db.Close();
+            }
+
             return "";
         }
 
@@ -106,6 +115,11 @@ namespace CursoWindowsFormsBiblioteca.Databases
                 status = false;
                 mensagem = "Erro ao buscar o conteúdo do identificador: " + ex.Message;
             }
+            finally
+            {
+                db.Close();
+            }
+
             return List;
         }
 
@@ -136,6 +150,11 @@ namespace CursoWindowsFormsBiblioteca.Databases
                 status = false;
                 mensagem = "Erro ao buscar o conteúdo do identificador: " + ex.Message;
             }
+            finally
+            {
+                db.Close();
+            }
+
         }
 
         public void Alterar(string Id, string jsonUnit)
@@ -148,7 +167,7 @@ namespace CursoWindowsFormsBiblioteca.Databases
 
                 if (dt.Rows.Count > 0)
                 {
-                    SQL = $"UPDATE {tabela} SET '{jsonUnit}' WHERE id = '{Id}'";
+                    SQL = $"UPDATE {tabela} SET JSON = '{jsonUnit}' WHERE id = '{Id}'";
                     db.SqlCommand(SQL);
 
                     status = true;
@@ -165,6 +184,11 @@ namespace CursoWindowsFormsBiblioteca.Databases
                 status = false;
                 mensagem = "Conexão com o Fichario com erro: " + ex.Message;
             }
+            finally
+            {
+                db.Close();
+            }
+
         }
 
     }

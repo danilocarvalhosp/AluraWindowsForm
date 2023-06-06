@@ -215,7 +215,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
             public void IncluirFicharioDB(string Conexao)
             {
                 string clienteJson = Cliente.SerializedClassUnit(this);
-                Fichario F = new Fichario(Conexao);
+                FicharioDB F = new FicharioDB(Conexao);
                 if (F.status)
                 {
                     F.Incluir(this.Id, clienteJson);
@@ -232,7 +232,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
 
             public Unit BuscarFicharioDB(string id, string conexao)
             {
-                Fichario F = new Fichario(conexao);
+                FicharioDB F = new FicharioDB(conexao);
                 if (F.status)
                 {
                     string clienteJson = F.Buscar(id);
@@ -247,7 +247,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
             public void AlterarFicharioDB(string conexao)
             {
                 string clienteJson = Cliente.SerializedClassUnit(this);
-                Fichario F = new Fichario(conexao);
+                FicharioDB F = new FicharioDB(conexao);
                 if (F.status)
                 {
                     F.Alterar(this.Id, clienteJson);
@@ -265,7 +265,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
             public void ApagarFicharioDB(string conexao)
             {
 
-                Fichario F = new Fichario(conexao);
+                FicharioDB F = new FicharioDB(conexao);
                 if (F.status)
                 {
                     F.Apagar(this.Id);
@@ -283,7 +283,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
 
             public List<List<string>> BuscarFicharioDBTodos(string conexao)
             {
-                Fichario F = new Fichario(conexao);
+                FicharioDB F = new FicharioDB(conexao);
                 if (F.status)
                 {
                     List<string> List = new List<string>();

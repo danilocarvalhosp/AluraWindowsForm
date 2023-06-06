@@ -131,7 +131,7 @@ namespace CursoWindowsForms
                 //C.IncluirFichario("E:\\Projetos\\Curso C#\\Alura\\Windows Form\\AluraWindowsForm\\CursoWindowsFormsLocalDB\\Fichario");
 
                 C.IncluirFicharioDB("Cliente");
-                MessageBox.Show("OK: Indentificador incluido com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("OK: Identificador incluido com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 //string clienteJson = Cliente.SerializedClassUnit(C);
                 //Fichario F = new Fichario("C:\\WindowsForms\\Curso\\CursoWindowsForms\\Fichario");
