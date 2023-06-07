@@ -473,6 +473,30 @@ namespace CursoWindowsFormsBiblioteca.Classes
                 return SQL;
             }
 
+            public string ToUpdate(string Id)
+            {
+                string SQL;
+                SQL = $"UPDATE tb_cliente SET ";
+                SQL += $"Nome = '{this.Nome}',";
+                SQL += $"NomePai = '{this.NomePai}',";
+                SQL += $"NomeMae = '{this.NomeMae}',";
+                SQL += $"NaoTemPai = {Convert.ToString(this.NaoTemPai)},";
+                SQL += $"Cpf = '{this.Cpf}',";
+                SQL += $"Genero = {Convert.ToString(this.Genero)},";
+                SQL += $"Cep = '{this.Cep}',";
+                SQL += $"Logradouro = '{this.Logradouro}',";
+                SQL += $"Complemento = '{this.Complemento}',";
+                SQL += $"Bairro = '{this.Bairro}',";
+                SQL += $"Cidade = '{this.Cidade}',";
+                SQL += $"Estado = '{this.Estado}',";
+                SQL += $"Telefone = '{this.Telefone}',";
+                SQL += $"Profissao = '{this.Profissao}',";
+                SQL += $"RendaFamiliar = {Convert.ToString(this.RendaFamiliar)}";
+                SQL += $"WHERE Id = '{this.Id}'";
+
+                return SQL;
+            }
+
             #endregion
         }
         public class List
