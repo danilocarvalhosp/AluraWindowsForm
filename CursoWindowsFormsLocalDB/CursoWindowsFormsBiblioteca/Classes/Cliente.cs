@@ -366,7 +366,6 @@ namespace CursoWindowsFormsBiblioteca.Classes
 
             public void ApagarFicharioSQL(string conexao)
             {
-
                 FicharioSQLServer F = new FicharioSQLServer(conexao);
                 if (F.status)
                 {
@@ -380,7 +379,6 @@ namespace CursoWindowsFormsBiblioteca.Classes
                 {
                     throw new Exception(F.mensagem);
                 }
-
             }
 
             public List<List<string>> BuscarFicharioSQLTodos(string conexao)
@@ -471,6 +469,32 @@ namespace CursoWindowsFormsBiblioteca.Classes
                     }
                     else
                     {
+                        SQL = $"DELETE FROM TB_CLIENTE WHERE ID = '{this.Id}'";
+                        db.SqlCommand(SQL);
+                        db.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Erro ao excluir o conteúdo do identificador: {ex.Message}");
+                }
+            }
+
+            public void ApagarFicharioSQLRel()
+            {
+                try
+                {
+                    string SQL = $"SELECT * FROM TB_CLIENTE WHERE ID = '{this.Id}'";
+                    var db = new SQLServerClass();
+                    var dt = db.SqlQuery(SQL);
+
+                    if (dt.Rows.Count == 0)
+                    {
+                        db.Close();
+                        throw new Exception($"Identificado não existente: {Id}");
+                    }
+                    else
+                    {
                         SQL = this.ToUpdate(this.Id);
                         db.SqlCommand(SQL);
                         db.Close();
@@ -480,6 +504,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
                 {
                     throw new Exception($"Erro ao alterar o conteúdo do identificador: {ex.Message}");
                 }
+
             }
 
             #endregion
