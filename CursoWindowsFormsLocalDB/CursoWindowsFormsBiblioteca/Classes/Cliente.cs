@@ -414,6 +414,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
 
             #region "CRUD do Fichario DB SQL Server Relacional"
 
+            // Repostagem da aula que foi pulada para continuar a sequência
             public void IncluirFicharioSQLRel()
             {
                 try
