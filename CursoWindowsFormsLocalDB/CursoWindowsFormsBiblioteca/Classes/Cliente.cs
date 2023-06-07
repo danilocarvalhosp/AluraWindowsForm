@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 using CursoWindowsFormsBiblioteca.Databases;
 using Newtonsoft.Json.Linq;
+using System.Data;
 
 namespace CursoWindowsFormsBiblioteca.Classes
 {
@@ -15,12 +16,12 @@ namespace CursoWindowsFormsBiblioteca.Classes
         public class Unit
         {
             [Required(ErrorMessage = "Código do Cliente é obrigatório.")]
-            [RegularExpression("([0-9]+)",ErrorMessage = "Código do Cliente somente aceita valores numéricos." )]
+            [RegularExpression("([0-9]+)", ErrorMessage = "Código do Cliente somente aceita valores numéricos.")]
             [StringLength(6, MinimumLength = 6, ErrorMessage = "Código do Cliente deve ter 6 dígitos.")]
             public string Id { get; set; }
 
             [Required(ErrorMessage = "Nome do Cliente é obrigatório.")]
-            [StringLength(50,ErrorMessage = "Nome do Cliente deve ter no máximo 50 caracteres.")]
+            [StringLength(50, ErrorMessage = "Nome do Cliente deve ter no máximo 50 caracteres.")]
             public string Nome { get; set; }
 
             [StringLength(50, ErrorMessage = "Nome do Pai deve ter no máximo 50 caracteres.")]
@@ -120,7 +121,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
                 if (F.status)
                 {
                     F.Incluir(this.Id, clienteJson);
-                    if(!(F.status))
+                    if (!(F.status))
                     {
                         throw new Exception(F.mensagem);
                     }
@@ -145,7 +146,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
                 }
             }
 
-            public void AlterarFichario (string conexao)
+            public void AlterarFichario(string conexao)
             {
                 string clienteJson = Cliente.SerializedClassUnit(this);
                 Fichario F = new Fichario(conexao);
@@ -155,7 +156,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
                     if (!(F.status))
                     {
                         throw new Exception(F.mensagem);
-                    }        
+                    }
                 }
                 else
                 {
@@ -194,7 +195,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
                         List<List<string>> ListaBusca = new List<List<string>>();
                         for (int i = 0; i <= List.Count - 1; i++)
                         {
-                            Cliente.Unit C = Cliente.DesSerializedClassUnit(List[i]);
+                            Cliente.Unit C = Cliente.DesSerializedClassUnit(List [i]);
                             ListaBusca.Add(new List<string> { C.Id, C.Nome });
                         }
                         return ListaBusca;
@@ -495,6 +496,29 @@ namespace CursoWindowsFormsBiblioteca.Classes
                 SQL += $"WHERE Id = '{this.Id}'";
 
                 return SQL;
+            }
+
+            public Unit DataRowToUnit(DataRow dr)
+            {
+                Unit u = new Unit();
+                u.Id = dr ["Id"].ToString();
+                u.Nome = dr ["Nome"].ToString();
+                u.NomePai = dr ["NomePai"].ToString();
+                u.NomeMae = dr ["NomeMae"].ToString();
+                u.NaoTemPai = Convert.ToInt32(dr ["NaoTemPai"]);
+                u.Cpf = dr ["Cpf"].ToString();
+                u.Genero = Convert.ToInt32(dr ["Genero"]);
+                u.Cep = dr ["Cep"].ToString();
+                u.Logradouro = dr ["Logradouro"].ToString();
+                u.Complemento = dr ["Complemento"].ToString();
+                u.Bairro = dr ["Bairro"].ToString();
+                u.Cidade = dr ["Cidade"].ToString();
+                u.Estado = dr ["Estado"].ToString();
+                u.Telefone = dr ["Telefone"].ToString();
+                u.Profissao = dr ["Profissao"].ToString();
+                u.RendaFamiliar = Convert.ToDouble(dr ["RendaFamiliar"]);
+
+                return u;
             }
 
             #endregion
