@@ -411,7 +411,24 @@ namespace CursoWindowsFormsBiblioteca.Classes
             }
             #endregion
 
-            #region CRUD do Fichario DB SQL Server Relacional
+            #region "CRUD do Fichario DB SQL Server Relacional"
+
+            public void IncluirFicharioSQLRel()
+            {
+                try
+                {
+                    string SQL;
+                    SQL = this.ToInsert();
+
+                    var db = new SQLServerClass();
+                    db.SqlCommand(SQL);
+                    db.Close();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Inclusão não permitida. Identificador: {this.Id}, erro: {ex.Message}");
+                }
+            }
 
             #endregion
 
