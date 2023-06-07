@@ -414,7 +414,6 @@ namespace CursoWindowsFormsBiblioteca.Classes
 
             #region "CRUD do Fichario DB SQL Server Relacional"
 
-            // Repostagem da aula que foi pulada para continuar a sequência
             public void IncluirFicharioSQLRel()
             {
                 try
@@ -429,6 +428,31 @@ namespace CursoWindowsFormsBiblioteca.Classes
                 catch (Exception ex)
                 {
                     throw new Exception($"Inclusão não permitida. Identificador: {this.Id}, erro: {ex.Message}");
+                }
+            }
+
+            public Unit BuscarFicharioSQLRel(string id)
+            {
+                try
+                {
+                    string SQL = $"SELECT * FROM TB_CLIENTE WHERE ID = '{this.Id}'";
+                    var db = new SQLServerClass();
+                    var dt = db.SqlQuery(SQL);
+
+                    if (dt.Rows.Count == 0)
+                    {
+                        db.Close();
+                        throw new Exception($"Identificado não existente: {Id}");
+                    }
+                    else
+                    {
+                        Unit u = this.DataRowToUnit(dt.Rows [0]);
+                        return u;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Erro ao buscar o conteúdo do identificador:" + ex.Message);
                 }
             }
 
