@@ -507,6 +507,29 @@ namespace CursoWindowsFormsBiblioteca.Classes
 
             }
 
+            public List<List<string>> BuscarFicharioSQLTodosRel()
+            {
+                List<List<string>> listaBusca = new List<List<string>>();
+
+                try
+                {
+                    var SQL = "SELECT * FROM TB_CLIENTE";
+                    var db = new SQLServerClass();
+                    var dt = db.SqlQuery(SQL);
+
+                    for (int i = 0; i <= dt.Rows.Count - 1; i++)
+                    {
+                        listaBusca.Add(new List<string> { dt.Rows [i] ["Id"].ToString(), dt.Rows [i] ["Nome"].ToString() });
+                    }
+
+                    return listaBusca;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Conexão com a base ocasionou um erro: {ex.Message}");
+                }
+            }
+
             #endregion
 
             #region Funções Auxiliares
