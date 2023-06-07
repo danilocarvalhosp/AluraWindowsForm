@@ -429,11 +429,11 @@ namespace CursoWindowsFormsBiblioteca.Classes
                 }
             }
 
-            public Unit BuscarFicharioSQLRel(string id)
+            public Unit BuscarFicharioSQLRel(string Id)
             {
                 try
                 {
-                    string SQL = $"SELECT * FROM TB_CLIENTE WHERE ID = '{this.Id}'";
+                    string SQL = $"SELECT * FROM TB_CLIENTE WHERE ID = '{Id}'";
                     var db = new SQLServerClass();
                     var dt = db.SqlQuery(SQL);
 
@@ -469,7 +469,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
                     }
                     else
                     {
-                        SQL = $"DELETE FROM TB_CLIENTE WHERE ID = '{this.Id}'";
+                        SQL = this.ToUpdate(this.Id);
                         db.SqlCommand(SQL);
                         db.Close();
                     }
@@ -495,7 +495,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
                     }
                     else
                     {
-                        SQL = this.ToUpdate(this.Id);
+                        SQL = $"DELETE FROM TB_CLIENTE WHERE ID = '{this.Id}'";
                         db.SqlCommand(SQL);
                         db.Close();
                     }
@@ -556,6 +556,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
                         RendaFamiliar)
                         VALUES ";
                 SQL += $"('{this.Id}',";
+                SQL += $"'{this.Nome}',";
                 SQL += $"'{this.NomePai}',";
                 SQL += $"'{this.NomeMae}',";
                 SQL += $"{Convert.ToString(this.NaoTemPai)},";
@@ -569,7 +570,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
                 SQL += $"'{this.Estado}',";
                 SQL += $"'{this.Telefone}',";
                 SQL += $"'{this.Profissao}',";
-                SQL += $"{Convert.ToString(this.RendaFamiliar)}";
+                SQL += $"{Convert.ToString(this.RendaFamiliar)})";
                 return SQL;
             }
 
