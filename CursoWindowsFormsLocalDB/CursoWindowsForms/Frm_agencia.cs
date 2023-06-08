@@ -23,5 +23,20 @@ namespace CursoWindowsForms
         {
             this.Close();
         }
+
+        private void tb_agenciaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tb_agenciaBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.byteBankDataSet);
+
+        }
+
+        private void Frm_agencia_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'byteBankDataSet.tb_agencia'. Você pode movê-la ou removê-la conforme necessário.
+            this.tb_agenciaTableAdapter.Fill(this.byteBankDataSet.tb_agencia);
+
+        }
     }
 }
