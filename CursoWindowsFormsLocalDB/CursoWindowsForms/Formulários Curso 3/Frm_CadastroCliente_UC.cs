@@ -72,14 +72,16 @@ namespace CursoWindowsForms
             Cmb_Estados.Items.Add("Sergipe(SE)");
             Cmb_Estados.Items.Add("Tocantins(TO)");
 
-            Tls_Principal.Items[0].ToolTipText = "Incluir na base de dados um novo cliente";
-            Tls_Principal.Items[1].ToolTipText = "Capturar um cliente já cadastrado na base";
-            Tls_Principal.Items[2].ToolTipText = "Atualize o cliente já existente";
-            Tls_Principal.Items[3].ToolTipText = "Apaga o cliente selecionado";
-            Tls_Principal.Items[4].ToolTipText = "Limpa dados da tela de entrada de dados";
+            Tls_Principal.Items [0].ToolTipText = "Incluir na base de dados um novo cliente";
+            Tls_Principal.Items [1].ToolTipText = "Capturar um cliente já cadastrado na base";
+            Tls_Principal.Items [2].ToolTipText = "Atualize o cliente já existente";
+            Tls_Principal.Items [3].ToolTipText = "Apaga o cliente selecionado";
+            Tls_Principal.Items [4].ToolTipText = "Limpa dados da tela de entrada de dados";
 
             Btn_Busca.Text = "Buscar";
+            grp_DataGrid.Text = "Clientes";
 
+            AtualizaGrid();
             LimparFormulario();
         }
 
@@ -109,9 +111,9 @@ namespace CursoWindowsForms
             {
                 Txt_NomePai.Enabled = false;
             }
-            else 
-            { 
-                Txt_NomePai.Enabled = true; 
+            else
+            {
+                Txt_NomePai.Enabled = true;
             }
         }
 
@@ -127,6 +129,7 @@ namespace CursoWindowsForms
 
                 C.IncluirFicharioSQLRel();
                 MessageBox.Show("OK: Identificador incluido com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AtualizaGrid();
             }
             catch (ValidationException Ex)
             {
@@ -140,11 +143,11 @@ namespace CursoWindowsForms
 
         private void abrirToolStripButton_Click(object sender, EventArgs e)
         {
-           if (Txt_Codigo.Text == "")
+            if (Txt_Codigo.Text == "")
             {
                 MessageBox.Show("Código do Cliente vazio.", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           else
+            else
             {
                 try
                 {
@@ -163,7 +166,7 @@ namespace CursoWindowsForms
                 catch (Exception Ex)
                 {
                     MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }               
+                }
             }
         }
 
@@ -184,6 +187,7 @@ namespace CursoWindowsForms
 
                     C.AlterarFicharioSQLRel();
                     MessageBox.Show("OK: Indentificador alterado com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AtualizaGrid();
                 }
                 catch (ValidationException Ex)
                 {
@@ -207,8 +211,8 @@ namespace CursoWindowsForms
                 try
                 {
                     Cliente.Unit C = new Cliente.Unit();
-                    
-                    C = C.BuscarFicharioSQLRel(Txt_Codigo.Text);              
+
+                    C = C.BuscarFicharioSQLRel(Txt_Codigo.Text);
                     if (C == null)
                     {
                         MessageBox.Show("Identificador não encontrado.", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -222,6 +226,7 @@ namespace CursoWindowsForms
                         {
                             C.ApagarFicharioSQLRel();
                             MessageBox.Show("OK: Indentificador apagado com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            AtualizaGrid();
                             LimparFormulario();
                         }
                     }
@@ -279,7 +284,7 @@ namespace CursoWindowsForms
             }
             else
             {
-                C.Estado = Cmb_Estados.Items[Cmb_Estados.SelectedIndex].ToString();
+                C.Estado = Cmb_Estados.Items [Cmb_Estados.SelectedIndex].ToString();
             }
 
             C.Telefone = Txt_Telefone.Text;
@@ -288,7 +293,7 @@ namespace CursoWindowsForms
             if (Information.IsNumeric(Txt_RendaFamiliar.Text))
             {
                 Double vRenda = Convert.ToDouble(Txt_RendaFamiliar.Text);
-                if (vRenda < 0 )
+                if (vRenda < 0)
                 {
                     C.RendaFamiliar = 0;
                 }
@@ -297,7 +302,7 @@ namespace CursoWindowsForms
                     C.RendaFamiliar = vRenda;
                 }
             }
-           
+
             return C;
         }
 
@@ -305,8 +310,8 @@ namespace CursoWindowsForms
         {
             Txt_Codigo.Text = C.Id;
             Txt_NomeCliente.Text = C.Nome;
-            Txt_NomeMae.Text  = C.NomeMae;
-            
+            Txt_NomeMae.Text = C.NomeMae;
+
             if (C.NaoTemPai == 1)
             {
                 Chk_TemPai.Checked = true;
@@ -331,24 +336,24 @@ namespace CursoWindowsForms
                 Rdb_Indefinido.Checked = true;
             }
 
-            Txt_CPF.Text  = C.Cpf;
-            Txt_CEP.Text  = C.Cep;
-            Txt_Logradouro.Text  = C.Logradouro;
-            Txt_Complemento.Text  = C.Complemento;
-            Txt_Cidade.Text  = C.Cidade;
+            Txt_CPF.Text = C.Cpf;
+            Txt_CEP.Text = C.Cep;
+            Txt_Logradouro.Text = C.Logradouro;
+            Txt_Complemento.Text = C.Complemento;
+            Txt_Cidade.Text = C.Cidade;
             Txt_Bairro.Text = C.Bairro;
-            Txt_Telefone.Text  = C.Telefone;
-            Txt_Profissao.Text  = C.Profissao;
+            Txt_Telefone.Text = C.Telefone;
+            Txt_Profissao.Text = C.Profissao;
 
-            if (C.Estado == "" )
+            if (C.Estado == "")
             {
                 Cmb_Estados.SelectedIndex = -1;
             }
             else
             {
-                for (int i=0; i <= Cmb_Estados.Items.Count -1; i++)
+                for (int i = 0; i <= Cmb_Estados.Items.Count - 1; i++)
                 {
-                    if (C.Estado == Cmb_Estados.Items[i].ToString())
+                    if (C.Estado == Cmb_Estados.Items [i].ToString())
                     {
                         Cmb_Estados.SelectedIndex = i;
                     }
@@ -377,7 +382,7 @@ namespace CursoWindowsForms
                         Cmb_Estados.SelectedIndex = -1;
                         for (int i = 0; i <= Cmb_Estados.Items.Count - 1; i++)
                         {
-                            var vPos = Strings.InStr(Cmb_Estados.Items[i].ToString(), "(" + CEP.uf + ")");
+                            var vPos = Strings.InStr(Cmb_Estados.Items [i].ToString(), "(" + CEP.uf + ")");
                             if (vPos > 0)
                             {
                                 Cmb_Estados.SelectedIndex = i;
@@ -411,6 +416,31 @@ namespace CursoWindowsForms
                     {
                         EscreveFormulario(C);
                     }
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void AtualizaGrid()
+        {
+            try
+            {
+                Cliente.Unit C = new Cliente.Unit();
+
+                var ListaBusca = C.BuscarFicharioSQLTodosRel();
+                dg_Clientes.Rows.Clear();
+
+                for (int i = 0; i <= ListaBusca.Count -1; i++)
+                {
+                    DataGridViewRow row = new DataGridViewRow();
+                    row.CreateCells(dg_Clientes);
+                    row.Cells [0].Value = ListaBusca [i] [0].ToString ();
+                    row.Cells [1].Value = ListaBusca [i] [1].ToString ();
+
+                    dg_Clientes.Rows.Add(row);
                 }
             }
             catch (Exception Ex)
