@@ -532,10 +532,13 @@
             this.Nome});
             this.dg_Clientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dg_Clientes.Location = new System.Drawing.Point(3, 16);
+            this.dg_Clientes.MultiSelect = false;
             this.dg_Clientes.Name = "dg_Clientes";
             this.dg_Clientes.ReadOnly = true;
+            this.dg_Clientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_Clientes.Size = new System.Drawing.Size(428, 442);
             this.dg_Clientes.TabIndex = 0;
+            this.dg_Clientes.DoubleClick += new System.EventHandler(this.dg_Clientes_DoubleClick);
             // 
             // Id
             // 

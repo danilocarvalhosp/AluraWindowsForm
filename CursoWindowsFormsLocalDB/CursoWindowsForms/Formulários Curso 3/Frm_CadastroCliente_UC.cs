@@ -433,12 +433,12 @@ namespace CursoWindowsForms
                 var ListaBusca = C.BuscarFicharioSQLTodosRel();
                 dg_Clientes.Rows.Clear();
 
-                for (int i = 0; i <= ListaBusca.Count -1; i++)
+                for (int i = 0; i <= ListaBusca.Count - 1; i++)
                 {
                     DataGridViewRow row = new DataGridViewRow();
                     row.CreateCells(dg_Clientes);
-                    row.Cells [0].Value = ListaBusca [i] [0].ToString ();
-                    row.Cells [1].Value = ListaBusca [i] [1].ToString ();
+                    row.Cells [0].Value = ListaBusca [i] [0].ToString();
+                    row.Cells [1].Value = ListaBusca [i] [1].ToString();
 
                     dg_Clientes.Rows.Add(row);
                 }
@@ -446,6 +446,33 @@ namespace CursoWindowsForms
             catch (Exception Ex)
             {
                 MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dg_Clientes_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dg_Clientes.SelectedRows [0];
+                string id = row.Cells [0].Value.ToString();
+
+                Cliente.Unit C = new Cliente.Unit();
+
+                C = C.BuscarFicharioSQLRel(id);
+                if (C == null)
+                {
+                    MessageBox.Show("Identificador não encontrado.", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    EscreveFormulario(C);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
